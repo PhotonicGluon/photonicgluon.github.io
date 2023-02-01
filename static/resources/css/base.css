@@ -1,0 +1,100 @@
+/* IMPORT FONTS */
+@font-face {
+    font-family: "CMU Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/cmun-normal.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/cmun-bold.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/cmun-italic.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/cmun-bolditalic.ttf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/odin-light.otf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/odin-lightitalic.otf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/odin-normal.otf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/odin-italic.otf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/odin-bold.otf");
+}
+
+@font-face {
+    font-family: "Odin Rounded";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/odin-bolditalic.otf");
+}
+
+/* GENERAL STYLING */
+html {
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    font-family: "Lato", "Arial", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white-primary: rgb(240, 240, 240);
+    --white-secondary: rgba(230, 230, 230, 0.85);
+
+    --font-size-small: 12pt;
+    --font-size-normal: 16pt;
+    --font-size-medium: 21pt;
+    --font-size-large: 42pt;
+    --font-size-huge: 56pt;
+
+    --container-max-width: 1180px;
+    --container-normal-width: 800px;
+    --container-medium-width: 700px;
+    --container-small-width: 500px;
+
+    --gutter-huge: 120px;
+    --gutter-medium: 60px;
+    --gutter-normal: 30px;
+    --gutter-small-1: 25px;
+    --gutter-small: 20px;
+}
