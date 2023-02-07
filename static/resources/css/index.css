@@ -1,5 +1,4 @@
 /* MAIN STYLING */
-
 * {
     margin: 0;
     padding: 0;
@@ -111,7 +110,7 @@ header h1 {
 }
 
 .get-in-touch-button {
-    background-color: var(--light-purple);
+    background-color: var(--purple);
     transition: all 0.2s;
 }
 
@@ -191,7 +190,7 @@ footer {
     width: 64px;
     align-content: center;
     justify-content: center;
-    background-color: var(--purple);
+    background-color: var(--light-purple);
     transition: all .4s;
     border-radius: 50%;
 }
