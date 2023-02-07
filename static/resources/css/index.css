@@ -57,11 +57,9 @@ nav {
 }
 
 .logo {
-    background-color: black;
-    padding: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-top: 30px;
-    height: 50px;
+    height: 60px;
     width: auto;
     float: left;
 }
