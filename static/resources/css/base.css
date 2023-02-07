@@ -73,14 +73,25 @@
 html {
     text-rendering: optimizeLegibility;
     font-size: 20px;
-    font-family: "Lato", "Arial", sans-serif;
+    font-family: "Jost", "Arial", sans-serif;
+    color: var(--white-primary);
     scroll-behavior: smooth;
+    background-color: black;
 }
 
 :root {
+    /* Colours */
+    --purple: rgb(98, 71, 170);
+    --light-purple: rgb(160, 108, 213);
+    --near-white-purple: rgb(226, 207, 234);
+
+    --dark-green: rgb(6, 39, 38);
+    --dark-blue: rgb(16, 43, 63);
+
     --white-primary: rgb(240, 240, 240);
     --white-secondary: rgba(230, 230, 230, 0.85);
 
+    /* Formatting */
     --font-size-small: 12pt;
     --font-size-normal: 16pt;
     --font-size-medium: 21pt;
@@ -97,4 +108,29 @@ html {
     --gutter-normal: 30px;
     --gutter-small-1: 25px;
     --gutter-small: 20px;
+}
+
+/* Button styling */
+.button {
+    text-decoration: none;
+    padding: 2px 10px;
+    color: inherit;
+    border: 1px solid var(--light-purple);
+}
+
+.button:hover::after,
+.button:focus::after {
+    right: 0;
+    background: var(--light-purple);
+}
+
+/* Header styling */
+h1, h2, h3 {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+/* CONTAINER STYLING */
+.grid-container {
+    display: grid;
 }

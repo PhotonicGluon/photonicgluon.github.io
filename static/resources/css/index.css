@@ -58,6 +58,9 @@ nav {
 }
 
 .logo {
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
     margin-top: 30px;
     height: 50px;
     width: auto;
@@ -93,7 +96,6 @@ header h1 {
     transform: translate(-50%, -50%);
     max-width: var(--container-max-width);
     margin: 0 auto;
-    /*text-align: center;*/
     color: white;
 }
 
@@ -106,4 +108,41 @@ header h1 {
 
 .hero-box-text span {
     margin: 1.5rem 0 3.5rem;
+}
+
+.get-in-touch-button {
+    background-color: var(--light-purple);
+    transition: all 0.2s;
+}
+
+.get-in-touch-button:hover {
+    background: transparent;
+}
+
+/* FEATURED PROJECTS */
+.featured-projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));  /* 3 equal-width columns */
+}
+
+.featured-projects-heading, .featured-col > h2 {
+    text-decoration: underline;
+}
+
+.featured-projects-heading {
+    font-weight: bold;
+}
+
+.featured-entry {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.featured-entry a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-entry img {
+    border-radius: 20px;
+    width: 90%;
 }
