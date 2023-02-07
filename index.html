@@ -20,6 +20,10 @@
     <link rel="stylesheet" type="text/css" href="static/resources/css/base.css">
     <link rel="stylesheet" type="text/css" href="static/resources/css/index.css">
 
+    <!-- Vendors' scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +32,7 @@
 </head>
 <body>
 <!-- Header -->
-<header>
+<header id="hero-box">
     <nav>
         <img src="static/resources/img/favicon.png" alt="Overwrite Logo" class="logo">
     </nav>
@@ -133,5 +137,13 @@
         Copyright © 2023 PhotonicGluon
     </span>
 </footer>
+
+<!-- Back-to-top button -->
+<a href="#hero-box" id="back-to-top" title="Back to top" style="visibility: hidden">
+    <img src="static/resources/img/arrow-up.svg" alt="Up Arrow">
+</a>
+
+<!-- Scripts -->
+<script src="static/resources/js/index.js"></script>
 </body>
 </html>

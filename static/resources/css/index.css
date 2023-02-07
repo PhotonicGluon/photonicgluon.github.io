@@ -179,3 +179,23 @@ footer {
 .social-media-item img {
     height: 40px;
 }
+
+/* MISCELLANEOUS */
+#back-to-top {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 64px;
+    width: 64px;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--purple);
+    transition: all .4s;
+    border-radius: 50%;
+}
+
+#back-to-top img {
+    height: 75%;
+}
