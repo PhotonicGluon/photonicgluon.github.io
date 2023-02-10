@@ -1,3 +1,8 @@
+// Helper functions
+function capitalize(string) {
+    return string[0].toUpperCase() + string.substring(1);
+}
+
 // Configure "back to top" button
 let backToTopButton = $("#back-to-top");
 

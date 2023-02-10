@@ -1,0 +1,37 @@
+[
+  {
+    "id": "auditranscribe",
+    "name": "AudiTranscribe",
+    "tag": "programming",
+    "date": "2022-02-20",
+    "banner": "https://raw.githubusercontent.com/AudiTranscribe/AudiTranscribe/main/Designs/banner/banner.png",
+    "url": "https://auditranscribe.app/",
+    "summary": "An open-source music transcription application."
+  },
+  {
+    "id": "quaestiones",
+    "name": "Quaestiones",
+    "tag": "programming",
+    "date": "2020-12-27",
+    "banner": "https://camo.githubusercontent.com/99c10fed61c1ca0e4d867e63396c38d68a951c3b5918cf0df62cd86eaa4d22fd/68747470733a2f2f692e6962622e636f2f72734351504d502f42616e6e65722d4c696768742e706e67",
+    "url": "https://github.com/PhotonicGluon/Quaestiones",
+    "summary": "An application that assists you in making a simple questions asking site."
+  },
+  {
+    "id": "chess-clock-trivia",
+    "name": "Chess Clock Trivia",
+    "tag": "programming",
+    "date": "2021-08-13",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.png",
+    "url": "https://github.com/PhotonicGluon/Chess-Clock-Trivia",
+    "summary": "Chess Clock Trivia is a trivia game where teams answer questions within a certain time limit."
+  },
+  {
+    "id": "abstract-algebra",
+    "name": "Abstract Algebra",
+    "tag": "mathematics",
+    "date": "TBD",
+    "banner": "static/resources/img/AA-banner.png",
+    "summary": "A series of books about abstract algebra."
+  }
+]
