@@ -71,7 +71,7 @@ function processData(data) {
                 </div>`;
 
         // Date configuration
-        outputHTML += `<span class="project-date">${projectInfo['date']}`;
+        outputHTML += `<span class="project-date">${projectInfo['start_date']}`;
         if (projectInfo["end_date"] != null) {
             outputHTML += ` &mdash; ${projectInfo["end_date"]}`
         }
