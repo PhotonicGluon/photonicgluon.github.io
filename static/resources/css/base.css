@@ -90,7 +90,7 @@ html {
     --dark-grey: rgb(50, 50, 50);
 
     --white-primary: rgb(240, 240, 240);
-    --white-secondary: rgba(230, 230, 230, 0.85);
+    --white-secondary: rgba(220, 220, 220, 0.8);
 
     /* Formatting */
     --font-size-small: 12pt;
@@ -163,4 +163,72 @@ p {
 /* CONTAINER STYLING */
 .grid-container {
     display: grid;
+}
+
+/* NAVBAR */
+nav {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    border-radius: 15px;
+    margin-top: 30px;
+    height: 60px;
+    width: auto;
+    float: left;
+}
+
+.main-nav, .main-nav ul {
+    list-style: none;
+}
+
+.main-nav {
+    margin-top: 30px;
+    float: right;
+}
+
+.main-nav li {
+    display: inline-block;
+    text-align: left;
+    font-size: 16pt;
+}
+
+.main-nav li:not(:last-of-type) {
+    width: 150px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white-secondary);
+    transition: all 0.2s;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropdown-content {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.dropdown-content li a {
+    text-transform: capitalize;
+    font-size: 14pt;
+}
+
+.dropdown:hover .dropdown-content {
+    height: inherit;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.main-nav li a:hover, .dropdown-content li a:hover {
+    color: var(--white-primary);
 }

@@ -50,20 +50,6 @@ section {
     }
 }
 
-/* NAVBAR */
-nav {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.logo {
-    border-radius: 15px;
-    margin-top: 30px;
-    height: 60px;
-    width: auto;
-    float: left;
-}
-
 /* HERO BOX */
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header_background.png");
@@ -223,7 +209,7 @@ footer {
     align-content: center;
     justify-content: center;
     background-color: var(--light-purple);
-    transition: all .4s;
+    transition: all 0.4s;
     border-radius: 50%;
 }
 
