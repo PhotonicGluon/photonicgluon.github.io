@@ -28,18 +28,30 @@ function processData(data) {
         return;
     }
 
-    // Sort projects by end date first
+    // Sort projects by end date (in reverse chronological order)
     projects.sort((a, b) => {
         let date1 = a["end_date"];
         let date2 = b["end_date"];
 
         // Place "Present" projects (i.e., projects that are ongoing) at the start of the list
-        if (date1 === "Present") {
+        if (date1 === "Present" && date2 === "Present") {
+            // If both are currently worked on, sort by name (in ascending order)
+            let name1 = a["name"];
+            let name2 = b["name"];
+
+            if (name1 > name2) {
+                return 1;
+            } else if (name1 < name2) {
+                return -1;
+            } else {
+                return 0;
+            }
+        } else if (date1 === "Present") {
             return -1;
         } else if (date2 === "Present") {
             return 1;
         } else {
-            return new Date(date2) - new Date(date1);  // Reverse chronological order
+            return new Date(date2) - new Date(date1);
         }
     });
 
