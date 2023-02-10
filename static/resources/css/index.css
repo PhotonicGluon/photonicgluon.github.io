@@ -123,6 +123,8 @@ header h1 {
 /* FEATURED PROJECTS */
 .featured-projects {
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 equal-width columns */
+    grid-column-gap: 5px;
+    grid-row-gap: 50px;
 }
 
 .featured-projects-heading, .featured-col > h2 {
@@ -136,7 +138,6 @@ header h1 {
 
 .featured-entry {
     text-align: center;
-    padding-bottom: 25px;
 }
 
 .featured-entry a {
@@ -144,9 +145,42 @@ header h1 {
     color: inherit;
 }
 
-.featured-entry img {
+.featured-entry-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.featured-entry-image img {
     border-radius: 20px;
-    width: 90%;
+    max-width: 90%;
+}
+
+.featured-project-tag {
+    display: inline-block;
+    font-size: 12pt;
+    padding: 5px;
+    width: 100px;
+
+    background-color: var(--tag-background-colour);
+    border: 1px solid var(--tag-border-colour);
+}
+
+.featured-project-tag-programming {
+    --tag-border-colour: rgb(13, 114, 165);
+    --tag-background-colour: rgb(13, 114, 165, 0.5);
+}
+
+.featured-project-tag-mathematics {
+    --tag-border-colour: rgb(82, 122, 82);
+    --tag-background-colour: rgb(82, 122, 82, 0.5);
+}
+
+.featured-project-tag-music {
+    --tag-border-colour: rgb(184, 184, 20);
+    --tag-background-colour: rgb(184, 184, 20, 0.5);
 }
 
 /* GET IN TOUCH */
