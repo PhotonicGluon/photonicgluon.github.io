@@ -311,8 +311,12 @@ footer {
     align-content: center;
     justify-content: center;
     background-color: var(--light-purple);
-    transition: all 0.4s;
+    transition: all 0.2s;
     border-radius: 50%;
+}
+
+#back-to-top:hover {
+    background-color: var(--purple);
 }
 
 #back-to-top img {
