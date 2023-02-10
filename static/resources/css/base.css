@@ -93,12 +93,6 @@ html {
     --white-secondary: rgba(220, 220, 220, 0.8);
 
     /* Formatting */
-    --font-size-small: 12pt;
-    --font-size-normal: 16pt;
-    --font-size-medium: 21pt;
-    --font-size-large: 42pt;
-    --font-size-huge: 56pt;
-
     --container-max-width: 1180px;
     --container-normal-width: 800px;
     --container-medium-width: 700px;
@@ -114,6 +108,8 @@ html {
 section {
     padding-bottom: var(--gutter-medium);
     border-bottom: 1px solid var(--dark-grey);
+    width: 90%;
+    margin: auto;
 }
 
 /* Button styling */
@@ -158,11 +154,42 @@ p, span {
 p {
     line-height: 135%;
     padding-bottom: 10px;
+    text-align: justify;
 }
 
 /* CONTAINER STYLING */
 .grid-container {
     display: grid;
+}
+
+/* HERO BOX */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header_background.png");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    background-attachment: fixed;
+    color: var(--white-secondary);
+}
+
+header h1, header h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+header h1 {
+    font-size: 36pt;
+}
+
+.hero-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    color: white;
 }
 
 /* NAVBAR */
@@ -215,6 +242,8 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s;
+    display: block;
+    padding: 0;
 }
 
 .dropdown-content li a {
@@ -226,9 +255,50 @@ nav {
     height: inherit;
     visibility: visible;
     opacity: 1;
-    display: block;
 }
 
 .main-nav li a:hover, .dropdown-content li a:hover {
     color: var(--white-primary);
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+
+.social-media-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.social-media-item:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.social-media-item img {
+    height: 40px;
+}
+
+/* MISCELLANEOUS */
+#back-to-top {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 64px;
+    width: 64px;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--light-purple);
+    transition: all 0.4s;
+    border-radius: 50%;
+}
+
+#back-to-top img {
+    height: 75%;
 }

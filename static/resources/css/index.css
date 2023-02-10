@@ -21,11 +21,6 @@ h1, h2 {
     margin: 0 auto;
 }
 
-section {
-    width: 90%;
-    margin: auto;
-}
-
 @media (max-width: 1340px) {
     .row {
         max-width: 1100px;
@@ -67,8 +62,7 @@ header h1, header h2 {
 }
 
 header h1 {
-    font-size: var(--font-size-huge);
-    color: var(--white-primary);
+    font-size: 56pt;
 }
 
 .hero-box {
@@ -86,7 +80,7 @@ header h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: var(--font-size-medium);
+    font-size: 21pt;
 }
 
 .hero-box-text span {
@@ -174,45 +168,4 @@ header h1 {
     font-weight: bold;
     text-align: center;
     text-decoration: underline;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    margin: 30px 0 50px 0;
-}
-
-.social-media-list {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.social-media-item:not(:last-of-type) {
-    margin-right: 20px;
-}
-
-.social-media-item img {
-    height: 40px;
-}
-
-/* MISCELLANEOUS */
-#back-to-top {
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    height: 64px;
-    width: 64px;
-    align-content: center;
-    justify-content: center;
-    background-color: var(--light-purple);
-    transition: all 0.4s;
-    border-radius: 50%;
-}
-
-#back-to-top img {
-    height: 75%;
 }
