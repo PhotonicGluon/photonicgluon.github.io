@@ -3,10 +3,33 @@ const PROJECTS_FILE = "/static/projects/projects.json";
 let projectsList = $("#projects-list");
 
 function processData(data) {
-    let numProjects = data.length;
+    // Obtain projects that match the filtering condition
+    let projects = [];
+
+    let filterCondition = new URLSearchParams(window.location.search).get("filter");
+    if (filterCondition != null) {
+        let initLength = data.length;
+        for (let i = 0; i < initLength; i++) {
+            if (data[i]["tag"] === filterCondition) projects.push(data[i]);
+        }
+    } else {
+        projects = data;
+    }
+
+    let numProjects = projects.length;
+
+    // If there are no projects, report that to the user
+    if (numProjects === 0) {
+        let projectsSection = $("#projects");
+        projectsSection.html(
+            `<p style="text-align: center">No projects matching the requested filter were found.</p>`
+        );
+        projectsSection.css("padding-bottom", 0);
+        return;
+    }
 
     // Sort projects by end date first
-    data.sort((a, b) => {
+    projects.sort((a, b) => {
         let date1 = a["end_date"];
         let date2 = b["end_date"];
 
@@ -22,7 +45,7 @@ function processData(data) {
 
     // Then add projects to the webpage
     for (let i = 0; i < numProjects; i++) {
-        let projectInfo = data[i];
+        let projectInfo = projects[i];
 
         let outputHTML =
             `<div class="project-entry">
