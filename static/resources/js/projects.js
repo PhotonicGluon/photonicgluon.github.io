@@ -3,8 +3,24 @@ const PROJECTS_FILE = "/static/projects/projects.json";
 let projectsList = $("#projects-list");
 
 function processData(data) {
-    // Add projects first
     let numProjects = data.length;
+
+    // Sort projects by end date first
+    data.sort((a, b) => {
+        let date1 = a["end_date"];
+        let date2 = b["end_date"];
+
+        // Place "Present" projects (i.e., projects that are ongoing) at the start of the list
+        if (date1 === "Present") {
+            return -1;
+        } else if (date2 === "Present") {
+            return 1;
+        } else {
+            return new Date(date2) - new Date(date1);  // Reverse chronological order
+        }
+    });
+
+    // Then add projects to the webpage
     for (let i = 0; i < numProjects; i++) {
         let projectInfo = data[i];
 
@@ -17,9 +33,16 @@ function processData(data) {
                 <div class="project-entry-description-head">
                     <span class="project-name">${projectInfo['name']}</span>
                     <span class="project-tag">${capitalize(projectInfo['tag'])}</span>
-                </div>
-                <span class="project-date">${projectInfo['date']}</span><br><br>
-                <span>${projectInfo['summary']}</span><br><br>
+                </div>`;
+
+        // Date configuration
+        outputHTML += `<span class="project-date">${projectInfo['date']}`;
+        if (projectInfo["end_date"] != null) {
+            outputHTML += ` &mdash; ${projectInfo["end_date"]}`
+        }
+        outputHTML += "</span><br><br>";
+
+        outputHTML += `<span>${projectInfo['summary']}</span><br><br>
                 
                 <!-- Todo add -->
                 <a href="#" class="button project-button-read-more">Read More</a>`;
