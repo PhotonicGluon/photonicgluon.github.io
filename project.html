@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="description" content="Overly obsessive projects by PhotonicGluon"/>
+    <meta name="keywords" content="java,python,javascript,css,mathematics,music"/>
+
+    <title>Overwrite</title>
+
+    <link rel="shortcut icon" type="image/png" href="static/resources/img/favicon.png"/>
+
+    <!-- Vendors' CSS files -->
+    <link rel="stylesheet" type="text/css" href="static/vendors/css/normalize.css">
+
+    <!-- My CSS files -->
+    <link rel="stylesheet" type="text/css" href="static/resources/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/resources/css/project.css">
+
+    <!-- Vendors' scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+            integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<header id="hero-box">
+    <nav>
+        <a href="/">
+            <img src="static/resources/img/Icon.jpg" alt="Overwrite Logo" class="logo">
+        </a>
+        <ul class="main-nav">
+            <li class="dropdown">
+                <a href="/projects" class="dropdown-button">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="/projects?filter=programming">Programming</a></li>
+                    <li><a href="/projects?filter=mathematics">Mathematics</a></li>
+                    <li><a href="/projects?filter=music">Music</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Me</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-box">
+        <h1 id="hero-box-project-name"></h1>
+        <h2 id="hero-box-project-duration"></h2>
+    </div>
+</header>
+
+<!-- Project display -->
+<section id="project">
+    <div id="project-banner-image"></div>
+    <ul id="project-links"></ul>
+    <div id="project-desc"></div>
+</section>
+
+<!-- Footer -->
+<footer role="contentinfo">
+    <ul class="social-media-list">
+        <li class="social-media-item">
+            <a href="https://github.com/PhotonicGluon" title="Link to GitHub">
+                <img src="static/vendors/img/github-mark-white.svg" alt="GitHub Logo">
+            </a>
+        </li>
+        <li class="social-media-item">
+            <a href="#" title="Link to LinkedIn">
+                <img src="static/vendors/img/LI-In-Bug.png" alt="LinkedIn Logo">
+            </a>
+        </li>
+    </ul>
+    <span>
+        Copyright © 2023 PhotonicGluon
+    </span>
+</footer>
+
+<!-- Back-to-top button -->
+<a href="#hero-box" id="back-to-top" title="Back to top" style="visibility: hidden">
+    <img src="static/resources/img/arrow-up.svg" alt="Up Arrow">
+</a>
+
+<!-- Scripts -->
+<script src="static/resources/js/base.js"></script>
+<script src="static/resources/js/project.js"></script>
+</body>
+</html>

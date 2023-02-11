@@ -157,6 +157,24 @@ p {
     text-align: justify;
 }
 
+/* Hyperlink styling */
+a {
+    color: rgb(148, 179, 242);
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: rgb(82, 129, 224);
+}
+
+a:visited {
+    color: rgb(145, 103, 228);
+}
+
+a:visited:hover {
+    color: rgb(113, 60, 221);
+}
+
 /* CONTAINER STYLING */
 .grid-container {
     display: grid;
@@ -164,7 +182,7 @@ p {
 
 /* HERO BOX */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header_background.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
     background-size: cover;
     background-position: center;
     height: 200px;
@@ -260,7 +278,6 @@ nav {
 .main-nav li a:hover, .dropdown-content li a:hover {
     color: var(--white-primary);
 }
-
 
 /* FOOTER */
 footer {

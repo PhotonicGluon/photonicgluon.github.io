@@ -1,5 +1,5 @@
 // Get all projects in the projects folder
-const PROJECTS_FILE = "/static/projects/projects.json";
+const PROJECTS_FILE = "projects.json";
 let projectsList = $("#projects-list");
 
 function processData(data) {
@@ -97,4 +97,4 @@ function processData(data) {
     });
 }
 
-$.ajax(PROJECTS_FILE, {success: processData});
+$.ajax(PROJECTS_FOLDER + PROJECTS_FILE, {success: processData});

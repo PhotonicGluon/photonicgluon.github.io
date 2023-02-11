@@ -1,3 +1,6 @@
+// Constants
+const PROJECTS_FOLDER = "/projects/";
+
 // Helper functions
 function capitalize(string) {
     return string[0].toUpperCase() + string.substring(1);
