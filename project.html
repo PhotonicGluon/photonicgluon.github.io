@@ -40,17 +40,25 @@
         <a href="/">
             <img src="static/resources/img/Icon.jpg" alt="Overwrite Logo" class="logo">
         </a>
-        <ul class="main-nav">
-            <li class="dropdown">
-                <a href="/projects" class="dropdown-button">Projects</a>
-                <ul class="dropdown-content">
-                    <li><a href="/projects?filter=programming">Programming</a></li>
-                    <li><a href="/projects?filter=mathematics">Mathematics</a></li>
-                    <li><a href="/projects?filter=music">Music</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About Me</a></li>
-        </ul>
+        <div class="main-nav" id="main-nav">
+            <a id="mobile-nav-button-close">
+                <img src="static/resources/img/window-close.svg" alt="Close Menu">
+            </a>
+            <ul class="main-nav-list">
+                <li class="dropdown">
+                    <a href="/projects" class="dropdown-button">Projects</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/projects?filter=programming">Programming</a></li>
+                        <li><a href="/projects?filter=mathematics">Mathematics</a></li>
+                        <li><a href="/projects?filter=music">Music</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </div>
+        <a id="mobile-nav-button-open">
+            <img src="static/resources/img/hamburger-menu.svg" alt="Open Menu">
+        </a>
     </nav>
 
     <div class="hero-box">

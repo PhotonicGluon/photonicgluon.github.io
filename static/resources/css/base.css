@@ -228,26 +228,26 @@ nav {
     float: left;
 }
 
-.main-nav, .main-nav ul {
-    list-style: none;
-}
-
 .main-nav {
     margin-top: 30px;
     float: right;
 }
 
-.main-nav li {
+.main-nav-list {
+    list-style: none;
+}
+
+.main-nav-list li {
     display: inline-block;
     text-align: left;
     font-size: 16pt;
 }
 
-.main-nav li:not(:last-of-type) {
+.main-nav-list li:not(:last-of-type) {
     width: 150px;
 }
 
-.main-nav li a {
+.main-nav-list li a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--white-secondary);
@@ -279,8 +279,12 @@ nav {
     opacity: 1;
 }
 
-.main-nav li a:hover, .dropdown-content li a:hover {
+.main-nav-list li a:hover, .dropdown-content li a:hover {
     color: var(--white-primary);
+}
+
+#mobile-nav-button-open, #mobile-nav-button-close {
+    display: none;
 }
 
 /* PROJECT TAGS */
@@ -338,4 +342,72 @@ footer {
 
 #back-to-top img {
     height: 75%;
+}
+
+/* QUERIES */
+@media (max-width: 767px) {
+    .main-nav {
+        position: fixed;
+        margin-top: 0;
+        padding-top: 30px;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background-color: black;
+        width: 0;
+        overflow-x: hidden;
+        direction: rtl;
+        height: 100%;
+        transition: all 0.5s;
+        text-align: left;
+    }
+
+    .main-nav-list {
+        display: block;
+        margin: 50px 30px 0 0;
+    }
+    
+    .main-nav-list li {
+        font-size: 24pt;
+        width: 100% !important;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+
+    #mobile-nav-button-open {
+        display: block;
+        float: right;
+        margin-top: 30px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #mobile-nav-button-close {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    #mobile-nav-button-open,#mobile-nav-button-open img, #mobile-nav-button-close, #mobile-nav-button-close img {
+        height: 40px;
+    }
+
+    #mobile-nav-button-close img {
+        text-align: right;
+    }
+
+    .dropdown .dropdown-content {
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown-content li {
+        margin: 5px 0 0 0;
+    }
+
+    .dropdown-content li a {
+        font-size: 20pt;
+    }
 }

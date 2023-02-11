@@ -56,3 +56,16 @@ $(window).scroll(() => {
         backToTopButton.css("transform", "scale(0)");
     }
 });
+
+// Configure mobile navigation
+let mainNav = $("#main-nav");
+let mobileNavButtonOpen = $("#mobile-nav-button-open");
+let mobileNavButtonClose = $("#mobile-nav-button-close");
+
+mobileNavButtonOpen.click(() => {
+    mainNav.css("width", "100%");
+});
+
+mobileNavButtonClose.click(() => {
+    mainNav.css("width", "0");
+});
