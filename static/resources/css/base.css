@@ -290,6 +290,7 @@ footer {
     list-style: none;
     justify-content: center;
     margin-bottom: 30px;
+    padding: 0;
 }
 
 .social-media-item:not(:last-of-type) {
