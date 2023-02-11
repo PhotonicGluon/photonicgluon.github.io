@@ -1,31 +1,40 @@
 // Retrieve project data
 let projectID = new URLSearchParams(window.location.search).get("id");
 let baseURL = PROJECTS_FOLDER + projectID + "/";
-let queryURL = baseURL + projectID + ".json";
 
-$.ajax(queryURL, {
+$.ajax(PROJECTS_FILE, {
     success: (data) => {
+        let project = data[projectID];
+
+        let title = $("title");
+        let heroBoxProjectName = $("#hero-box-project-name");
+        if (project == null) {
+            title.text("Project Not Found");
+            heroBoxProjectName.text("Project Not Found");
+            return;
+        }
+
         // Update main details
-        $("title").text("Overwrite - " + data["name"]);
-        $("#hero-box-project-name").text(data["name"]);
-        $("#hero-box-project-duration").html(data["start_date"] + " &mdash; " + data["end_date"]);
-        $("#project-banner-image").html(`<img src="${data['banner']}" alt="${data['name']} Banner">`);
+        title.text("Overwrite - " + project["name"]);
+        heroBoxProjectName.text(project["name"]);
+        $("#hero-box-project-duration").html(project["start_date"] + " &mdash; " + project["end_date"]);
+        $("#project-banner-image").html(`<img src="${project['banner']}" alt="${project['name']} Banner">`);
 
         // Add links
         let projectLinks = $("#project-links");
-        if (data["github_url"]) projectLinks.append(`<li>
-            <a href="${data['github_url']}" title="Link to GitHub">
+        if (project["github_url"]) projectLinks.append(`<li>
+            <a href="${project['github_url']}" title="Link to GitHub">
                 <img src="static/vendors/img/github-mark-white.svg" alt="GitHub Icon">
             </a>
         </li>`);
-        if (data["website_url"]) projectLinks.append(`<li>
-            <a href="${data['website_url']}" title="Link to Website">
+        if (project["website_url"]) projectLinks.append(`<li>
+            <a href="${project['website_url']}" title="Link to Website">
                 <img src="static/vendors/img/internet.svg" alt="Website Icon">
             </a>
         </li>`);
 
         // Retrieve the actual data to show
-        if (data["webpage_type"] === "markdown") {
+        if (project["page_type"] === "markdown") {
             $.ajax(baseURL + projectID + ".md", {
                 success: (code) => {
                     let converter = new showdown.Converter();
@@ -38,9 +47,5 @@ $.ajax(queryURL, {
                 success: (code) => $("#project-desc").html(code)
             });
         }
-    },
-    error: (msg) => {
-        $("title").text("Project Not Found");
-        $("#hero-box-project-name").text("Project Not Found");
     }
 });

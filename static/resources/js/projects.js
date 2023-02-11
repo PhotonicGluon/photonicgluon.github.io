@@ -1,5 +1,4 @@
 // Get all projects in the projects folder
-const PROJECTS_FILE = "projects.json";
 let projectsList = $("#projects-list");
 
 function processData(data) {
@@ -7,13 +6,15 @@ function processData(data) {
     let projects = [];
 
     let filterCondition = new URLSearchParams(window.location.search).get("filter");
-    if (filterCondition != null) {
-        let initLength = data.length;
-        for (let i = 0; i < initLength; i++) {
-            if (data[i]["tags"].includes(filterCondition)) projects.push(data[i]);
+    for (let key in data) {
+        if (filterCondition != null) {
+            if (data[key]["tags"].includes(filterCondition)) {
+                data[key]["id"] = key;
+                projects.push(data[key]);
+            }
+        } else {
+            projects.push(data[key]);
         }
-    } else {
-        projects = data;
     }
 
     let numProjects = projects.length;
@@ -83,9 +84,9 @@ function processData(data) {
 
         outputHTML += `<span>${projectInfo['summary']}</span><br><br>
                 <a href="/project?id=${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
-        if (projectInfo["url"] != null) {
-            outputHTML += `<a href="${projectInfo['url']}" target="_blank" class="button project-button-webpage">
-                Project Webpage
+        if (projectInfo["website_url"] != null) {
+            outputHTML += `<a href="${projectInfo['website_url']}" target="_blank" class="button project-button-website">
+                Project Website
                 </a>`;
         }
         outputHTML += `</div></div>`;
@@ -96,4 +97,4 @@ function processData(data) {
     projectsList.find(".project-tag").each((i, obj) => addColourToTag(obj));
 }
 
-$.ajax(PROJECTS_FOLDER + PROJECTS_FILE, {success: processData});
+$.ajax(PROJECTS_FILE, {success: processData});

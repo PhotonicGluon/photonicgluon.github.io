@@ -71,7 +71,7 @@
     font-size: 12pt;
 }
 
-.project-button-read-more, .project-button-webpage {
+.project-button-read-more, .project-button-website {
     margin-right: 10px;
 }
 
@@ -83,10 +83,10 @@
     background-color: var(--blue);
 }
 
-.project-button-webpage {
+.project-button-website {
     border: 1px solid var(--green);
 }
 
-.project-button-webpage:hover::after {
+.project-button-website:hover::after {
     background-color: var(--green);
 }

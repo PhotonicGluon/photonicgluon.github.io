@@ -1,5 +1,7 @@
 // Constants
 const PROJECTS_FOLDER = "/projects/";
+const PROJECTS_FILE = PROJECTS_FOLDER + "projects.json";
+
 const TAGS = {
     "programming": [13, 114, 165],
     "mathematics": [82, 122, 82],
