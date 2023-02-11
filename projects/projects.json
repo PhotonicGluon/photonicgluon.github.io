@@ -1,33 +1,23 @@
 [
   {
-    "id": "overwrite",
-    "name": "Overwrite",
-    "tag": "programming",
-    "start_date": "2023-02-01",
+    "id": "abstract-algebra",
+    "name": "Abstract Algebra",
+    "tag": "mathematics",
+    "start_date": "2022-10-04",
     "end_date": "Present",
-    "banner": "static/resources/img/banner-dark.png",
-    "url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
-    "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon."
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Banner.png",
+    "url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
+    "summary": "A series of books about abstract algebra."
   },
   {
     "id": "auditranscribe",
     "name": "AudiTranscribe",
     "tag": "programming",
-    "start_date": "2022-02-20",
+    "start_date": "2021-11-14",
     "end_date": "Present",
     "banner": "https://raw.githubusercontent.com/AudiTranscribe/AudiTranscribe/main/Designs/banner/banner.png",
     "url": "https://auditranscribe.app/",
     "summary": "An open-source music transcription application."
-  },
-  {
-    "id": "quaestiones",
-    "name": "Quaestiones",
-    "tag": "programming",
-    "start_date": "2020-12-27",
-    "end_date": "2021-06-06",
-    "banner": "https://camo.githubusercontent.com/99c10fed61c1ca0e4d867e63396c38d68a951c3b5918cf0df62cd86eaa4d22fd/68747470733a2f2f692e6962622e636f2f72734351504d502f42616e6e65722d4c696768742e706e67",
-    "url": "https://github.com/PhotonicGluon/Quaestiones",
-    "summary": "An application that assists you in making a simple questions asking site."
   },
   {
     "id": "chess-clock-trivia",
@@ -40,13 +30,23 @@
     "summary": "Chess Clock Trivia is a trivia game where teams answer questions within a certain time limit."
   },
   {
-    "id": "abstract-algebra",
-    "name": "Abstract Algebra",
-    "tag": "mathematics",
-    "start_date": "2022-10-04",
+    "id": "overwrite",
+    "name": "Overwrite",
+    "tag": "programming",
+    "start_date": "2023-02-01",
     "end_date": "Present",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Banner.png",
-    "url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
-    "summary": "A series of books about abstract algebra."
+    "banner": "static/resources/img/banner-dark.png",
+    "url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
+    "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon."
+  },
+  {
+    "id": "quaestiones",
+    "name": "Quaestiones",
+    "tag": "programming",
+    "start_date": "2020-12-27",
+    "end_date": "2021-06-06",
+    "banner": "https://camo.githubusercontent.com/99c10fed61c1ca0e4d867e63396c38d68a951c3b5918cf0df62cd86eaa4d22fd/68747470733a2f2f692e6962622e636f2f72734351504d502f42616e6e65722d4c696768742e706e67",
+    "url": "https://github.com/PhotonicGluon/Quaestiones",
+    "summary": "An application that assists you in making a simple questions asking site."
   }
 ]

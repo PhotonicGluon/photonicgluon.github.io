@@ -8,7 +8,7 @@ $.ajax(queryURL, {
         // Update main details
         $("title").text("Overwrite - " + data["name"]);
         $("#hero-box-project-name").text(data["name"]);
-        $("#hero-box-project-duration").html(data["duration"]);
+        $("#hero-box-project-duration").html(data["start_date"] + " &mdash; " + data["end_date"]);
         $("#project-banner-image").html(`<img src="${data['banner']}" alt="${data['name']} Banner">`);
 
         // Add links

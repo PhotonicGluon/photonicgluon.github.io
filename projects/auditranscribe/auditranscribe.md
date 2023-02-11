@@ -1,29 +1,26 @@
-An open-source music transcription application.
+*AudiTranscribe* is an open-source music transcription application.
 
 # Features
 
-AudiTranscribe was built to assist you in transcribing music pieces.
+*AudiTranscribe* was built to assist you in transcribing music pieces.
 
 - Convert supported audio files into spectrograms for easier transcription.
 - Play notes alongside the music piece to get a "feel" of what notes are being played by clicking on the appropriate row
   on the spectrogram.
 - Get a sense of how the notes are arranged in the song.
 
-# Why make AudiTranscribe?
+# History / Why make AudiTranscribe?
 
-Transcribing music by ear is hard. Tiny details in music pieces may be left out when transcribing by ear, and it takes
-practice to properly transcribe notes from a song. AudiTranscribe was created to ease this process and allow the average
-person to find out the notes of their favourite songs.
+I started work on *AudiTranscribe* way back in November 2021. I used Flask and my web-design skills to make a
+rudimentary version of *AudiTranscribe*. The old version of *AudiTranscribe* which was written in Python can still be
+found [here](https://github.com/PhotonicGluon/AudiTranscribe-Python).
 
-Also, professional music transcription services cost *a lot*, especially if you plan to use the transcription service
-a few times over a year. In that case, the cost of these services (which range from $40 to $120) are not worth it.
-AudiTranscribe is meant to be an Open-Source and free alternative.
+At some point, I decided that making a web-application to perform essentially local computations was a daft idea, and so
+shifted to Java to work on the next iteration of *AudiTranscribe*. This was formally started on 20 February 2022, and
+continues to this day.
 
-# Licences
-
-Full licence information, including dependencies' licences, can be found [here](https://auditranscribe.app/licences).
-
-This project is licensed under
-the [GNU General Public Licence V3](https://github.com/AudiTranscribe/AudiTranscribe/blob/main/LICENSE).
-
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B32213%2Fgithub.com%2FAudiTranscribe%2FAudiTranscribe.svg?type=large)](https://app.fossa.com/projects/custom%2B32213%2Fgithub.com%2FAudiTranscribe%2FAudiTranscribe?ref=badge_large)
+I made *AudiTranscribe* because I found transcribing music by ear hard. Tiny details in music pieces may be left out,
+and it takes practice to properly transcribe notes from a song. *AudiTranscribe* was created to ease this process and
+allow the average person to find out the notes of their favourite songs. Also, professional music transcription services
+cost *a lot*, especially if you plan to use the transcription service a few times over a year. In that case, the cost of
+these services (which range from $40 to $120) are not worth it. *AudiTranscribe* is an open-Source and free alternative.
