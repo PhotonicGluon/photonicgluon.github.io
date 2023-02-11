@@ -125,6 +125,10 @@ header h1 {
     color: inherit;
 }
 
+.featured-entry a:hover {
+    color: inherit;
+}
+
 .featured-entry-image {
     display: flex;
     flex-wrap: wrap;

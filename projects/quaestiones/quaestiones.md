@@ -20,6 +20,7 @@ page:
 ![Manage Questions](https://i.ibb.co/pffPgJV/Manage-Questions.png)
 
 As well as change how the input for **every question** is generated via an integrated python script:
+
 ![Edit Question](https://i.ibb.co/tqb0Cr2/Edit-Question.png)
 
 # History
