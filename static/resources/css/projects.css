@@ -103,6 +103,10 @@
 
 /* QUERIES */
 @media (max-width: 1023px) {
+    #projects-list li:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+
     .project-entry {
         grid-template-columns: auto;
     }
