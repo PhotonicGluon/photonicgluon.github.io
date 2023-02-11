@@ -305,6 +305,10 @@ footer {
     height: 40px;
 }
 
+.copyright {
+    font-size: 12pt;
+}
+
 /* PROJECT TAGS */
 .project-tag-programming {
     --tag-border-colour: var(--blue);

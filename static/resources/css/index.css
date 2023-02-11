@@ -90,6 +90,7 @@ header h1 {
 .get-in-touch-button {
     background-color: var(--purple);
     transition: all 0.2s;
+    font-size: 18pt;
 }
 
 .get-in-touch-button:hover {
