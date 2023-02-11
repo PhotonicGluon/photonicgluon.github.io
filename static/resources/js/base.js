@@ -29,7 +29,7 @@ function addColourToTag(tagObj) {
     let colourArray = TAGS[tagType];
 
     if (colourArray === null) {
-        colourArray = [160, 108, 213];  // Light purple
+        return;  // We already assigned default colours in CSS
     }
 
     // Specify colours

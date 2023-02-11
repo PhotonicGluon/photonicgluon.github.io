@@ -2,7 +2,9 @@
   {
     "id": "abstract-algebra",
     "name": "Abstract Algebra",
-    "tag": "mathematics",
+    "tags": [
+      "mathematics"
+    ],
     "start_date": "2022-10-04",
     "end_date": "Present",
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Banner.png",
@@ -12,7 +14,10 @@
   {
     "id": "auditranscribe",
     "name": "AudiTranscribe",
-    "tag": "programming",
+    "tags": [
+      "programming",
+      "music"
+    ],
     "start_date": "2021-11-14",
     "end_date": "Present",
     "banner": "https://raw.githubusercontent.com/AudiTranscribe/AudiTranscribe/main/Designs/banner/banner.png",
@@ -22,7 +27,9 @@
   {
     "id": "chess-clock-trivia",
     "name": "Chess Clock Trivia",
-    "tag": "programming",
+    "tags": [
+      "programming"
+    ],
     "start_date": "2021-08-13",
     "end_date": "2021-09-15",
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.png",
@@ -32,7 +39,9 @@
   {
     "id": "overwrite",
     "name": "Overwrite",
-    "tag": "programming",
+    "tags": [
+      "programming"
+    ],
     "start_date": "2023-02-01",
     "end_date": "Present",
     "banner": "static/resources/img/banner-dark.png",
@@ -42,7 +51,9 @@
   {
     "id": "quaestiones",
     "name": "Quaestiones",
-    "tag": "programming",
+    "tags": [
+      "programming"
+    ],
     "start_date": "2020-12-27",
     "end_date": "2021-06-06",
     "banner": "https://camo.githubusercontent.com/99c10fed61c1ca0e4d867e63396c38d68a951c3b5918cf0df62cd86eaa4d22fd/68747470733a2f2f692e6962622e636f2f72734351504d502f42616e6e65722d4c696768742e706e67",

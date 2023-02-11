@@ -283,6 +283,13 @@ nav {
     color: var(--white-primary);
 }
 
+/* PROJECT TAGS */
+.project-tag {
+    /* Default colours */
+    --tag-border-colour: var(--light-purple);
+    --tag-background-colour: rgba(160, 108, 213, 0.5); /* Light purple with alpha */
+}
+
 /* FOOTER */
 footer {
     text-align: center;

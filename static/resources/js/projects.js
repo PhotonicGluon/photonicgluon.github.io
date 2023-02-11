@@ -10,7 +10,7 @@ function processData(data) {
     if (filterCondition != null) {
         let initLength = data.length;
         for (let i = 0; i < initLength; i++) {
-            if (data[i]["tag"] === filterCondition) projects.push(data[i]);
+            if (data[i]["tags"].includes(filterCondition)) projects.push(data[i]);
         }
     } else {
         projects = data;
@@ -66,9 +66,13 @@ function processData(data) {
             </div>
             <div class="project-entry-description">
                 <div class="project-entry-description-head">
-                    <span class="project-name">${projectInfo['name']}</span>
-                    <span class="project-tag">${capitalize(projectInfo['tag'])}</span>
-                </div>`;
+                    <span class="project-name">${projectInfo['name']}</span>`;
+
+        // Add tags
+        projectInfo["tags"].forEach((tag) => {
+            outputHTML += `<span class="project-tag">${capitalize(tag)}</span>`;
+        });
+        outputHTML += "</div>";
 
         // Date configuration
         outputHTML += `<span class="project-date">${projectInfo['start_date']}`;
