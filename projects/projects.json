@@ -44,7 +44,8 @@
     "name": "Abstract Algebra",
     "tag": "mathematics",
     "start_date": "TBD",
-    "banner": "static/resources/img/AA-banner.png",
+    "banner": "https://github.com/PhotonicGluon/Abstract-Algebra-Book/blob/main/Banner.png?raw=true",
+    "url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
     "summary": "A series of books about abstract algebra."
   }
 ]
