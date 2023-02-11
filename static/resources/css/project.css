@@ -4,10 +4,30 @@
 }
 
 /* PROJECT DETAILS */
+#project-tags {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-tag {
+    display: inline-block;
+    text-align: center;
+    font-size: 12pt;
+    padding: 5px;
+    margin: 10px 5px;
+    width: 100px;
+    border-radius: 10px;
+
+    background-color: var(--tag-background-colour);
+    border: 1px solid var(--tag-border-colour);
+}
+
 #project-links {
     display: flex;
     list-style: none;
     justify-content: center;
+    margin-top: 0;
     padding: 0;
 }
 

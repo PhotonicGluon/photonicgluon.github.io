@@ -20,6 +20,14 @@ $.ajax(PROJECTS_FILE, {
         $("#hero-box-project-duration").html(project["start_date"] + " &mdash; " + project["end_date"]);
         $("#project-banner-image").html(`<img src="${project['banner']}" alt="${project['name']} Banner">`);
 
+        // Add tags
+        let projectTags = $("#project-tags");
+        console.log(project["tags"]);
+        for (let i in project["tags"]) {
+            projectTags.append(`<span class="project-tag" id="tag-${i}">${capitalize(project["tags"][i])}</span>`);
+            addColourToTag(document.getElementById(`tag-${i}`));
+        }
+
         // Add links
         let projectLinks = $("#project-links");
         if (project["github_url"]) projectLinks.append(`<li>
