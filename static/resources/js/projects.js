@@ -78,9 +78,7 @@ function processData(data) {
         outputHTML += "</span><br><br>";
 
         outputHTML += `<span>${projectInfo['summary']}</span><br><br>
-                
-                <!-- Todo add -->
-                <a href="#" class="button project-button-read-more">Read More</a>`;
+                <a href="/project?id=${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
         if (projectInfo["url"] != null) {
             outputHTML += `<a href="${projectInfo['url']}" target="_blank" class="button project-button-webpage">
                 Project Webpage
