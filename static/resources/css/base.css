@@ -135,6 +135,10 @@ section {
     transition: all 0.2s cubic-bezier(1, 0.7, 0.4, 0.9);
 }
 
+.button:hover, .button:visited, .button:visited:hover {
+    color: inherit;
+}
+
 .button:hover::after {
     right: 0;
     background: var(--purple);
