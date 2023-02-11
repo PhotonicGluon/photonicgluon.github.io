@@ -1,4 +1,2 @@
-// Configure colours for labels
-$("#featured-projects-container").find("span").each((i, obj) => {
-    $(obj).addClass(`project-tag-${obj.innerText.toLowerCase()}`);
-});
+// Configure colours for tags
+$("#featured-projects-container").find("span").each((i, obj) => addColourToTag(obj));

@@ -89,10 +89,7 @@ function processData(data) {
         projectsList.append(`<li>${outputHTML}</li>`);
     }
 
-    // Configure colours for labels
-    projectsList.find(".project-tag").each((i, obj) => {
-        $(obj).addClass(`project-tag-${obj.innerText.toLowerCase()}`);
-    });
+    projectsList.find(".project-tag").each((i, obj) => addColourToTag(obj));
 }
 
 $.ajax(PROJECTS_FOLDER + PROJECTS_FILE, {success: processData});

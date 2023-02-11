@@ -1,9 +1,40 @@
 // Constants
 const PROJECTS_FOLDER = "/projects/";
+const TAGS = {
+    "programming": [13, 114, 165],
+    "mathematics": [82, 122, 82],
+    "music": [184, 184, 20]
+};
 
 // Helper functions
 function capitalize(string) {
     return string[0].toUpperCase() + string.substring(1);
+}
+
+function addAlphaToColour(colourArray, alpha) {
+    return [colourArray[0], colourArray[1], colourArray[2], alpha];
+}
+
+function makeColourFromArray(colourArray) {
+    if (colourArray.length === 3) {
+        return `rgb(${colourArray[0]}, ${colourArray[1]}, ${colourArray[2]})`;
+    } else {
+        return `rgba(${colourArray[0]}, ${colourArray[1]}, ${colourArray[2]}, ${colourArray[3]})`;
+    }
+}
+
+function addColourToTag(tagObj) {
+    // Find the colour to add to the tag
+    let tagType = tagObj.innerText.toLowerCase();
+    let colourArray = TAGS[tagType];
+
+    if (colourArray === null) {
+        colourArray = [160, 108, 213];  // Light purple
+    }
+
+    // Specify colours
+    $(tagObj).css("--tag-border-colour", makeColourFromArray(colourArray));
+    $(tagObj).css("--tag-background-colour", makeColourFromArray(addAlphaToColour(colourArray, 0.5)));
 }
 
 // Configure "back to top" button

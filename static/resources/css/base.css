@@ -309,22 +309,6 @@ footer {
     font-size: 12pt;
 }
 
-/* PROJECT TAGS */
-.project-tag-programming {
-    --tag-border-colour: var(--blue);
-    --tag-background-colour: rgb(13, 114, 165, 0.5); /* `--blue` with alpha */
-}
-
-.project-tag-mathematics {
-    --tag-border-colour: var(--green);
-    --tag-background-colour: rgb(82, 122, 82, 0.5); /* `--green` with alpha */
-}
-
-.project-tag-music {
-    --tag-border-colour: rgb(184, 184, 20);
-    --tag-background-colour: rgb(184, 184, 20, 0.5);
-}
-
 /* MISCELLANEOUS */
 #back-to-top {
     display: flex;
