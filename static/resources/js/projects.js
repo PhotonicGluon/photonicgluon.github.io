@@ -13,6 +13,7 @@ function processData(data) {
                 projects.push(data[key]);
             }
         } else {
+            data[key]["id"] = key;
             projects.push(data[key]);
         }
     }
