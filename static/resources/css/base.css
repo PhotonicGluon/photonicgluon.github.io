@@ -73,6 +73,7 @@
 html {
     text-rendering: optimizeLegibility;
     font-size: 16pt;
+    text-align: justify;
     font-family: "Jost", "Arial", sans-serif;
     color: var(--white-primary);
     scroll-behavior: smooth;
@@ -184,36 +185,6 @@ a:visited:hover {
     display: grid;
 }
 
-/* HERO BOX */
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    background-attachment: fixed;
-    color: var(--white-secondary);
-}
-
-header h1, header h2 {
-    margin-top: 0;
-    text-align: center;
-    margin-bottom: 1px;
-}
-
-header h1 {
-    font-size: 36pt;
-}
-
-.hero-box {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    color: white;
-}
-
 /* NAVBAR */
 nav {
     max-width: 90%;
@@ -287,6 +258,36 @@ nav {
     display: none;
 }
 
+/* HERO BOX */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    background-attachment: fixed;
+    color: var(--white-secondary);
+}
+
+header h1, header h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+header h1 {
+    font-size: 36pt;
+}
+
+.hero-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    color: white;
+}
+
 /* PROJECT TAGS */
 .project-tag {
     /* Default colours */
@@ -346,6 +347,10 @@ footer {
 
 /* QUERIES */
 @media (max-width: 768px) {
+    section {
+        width: 85%;
+    }
+
     .main-nav {
         position: fixed;
         margin-top: 0;
@@ -366,7 +371,7 @@ footer {
         display: block;
         margin: 50px 30px 0 0;
     }
-    
+
     .main-nav-list li {
         font-size: 24pt;
         width: 100% !important;
@@ -389,7 +394,7 @@ footer {
         right: 30px;
     }
 
-    #mobile-nav-button-open,#mobile-nav-button-open img, #mobile-nav-button-close, #mobile-nav-button-close img {
+    #mobile-nav-button-open, #mobile-nav-button-open img, #mobile-nav-button-close, #mobile-nav-button-close img {
         height: 40px;
     }
 
