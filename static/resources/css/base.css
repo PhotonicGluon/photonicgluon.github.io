@@ -415,14 +415,14 @@ footer {
     .dropdown-content li a {
         font-size: 20pt;
     }
+
+    #back-to-top {
+        display: none;
+    }
 }
 
 @media (max-width: 425px) {
     header h1 {
         font-size: 32pt;
-    }
-
-    #back-to-top {
-        display: none;
     }
 }

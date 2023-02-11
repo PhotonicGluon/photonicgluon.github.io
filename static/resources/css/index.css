@@ -26,7 +26,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: max(600px, 100vh);
     background-attachment: fixed;
     color: var(--white-secondary);
 }
@@ -44,7 +44,7 @@ header h1 {
 .hero-box {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: max(300px, 50%);
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: var(--container-max-width);

@@ -64,7 +64,21 @@
         top: 150px;
     }
 
+    #hero-box-project-duration span {
+        display: block;
+    }
+
     #project-banner-image {
         height: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        height: 400px;
+    }
+
+    .hero-box {
+        top: 200px;
     }
 }

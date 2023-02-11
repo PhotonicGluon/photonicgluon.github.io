@@ -17,7 +17,8 @@ $.ajax(PROJECTS_FILE, {
         // Update main details
         title.text("Overwrite - " + project["name"]);
         heroBoxProjectName.text(project["name"]);
-        $("#hero-box-project-duration").html(project["start_date"] + " &mdash; " + project["end_date"]);
+        $("#hero-box-project-start-date").text(project["start_date"]);
+        $("#hero-box-project-end-date").text(project["end_date"]);
         $("#project-banner-image").html(`<img src="${project['banner']}" alt="${project['name']} Banner">`);
 
         // Add tags
