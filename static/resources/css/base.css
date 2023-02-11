@@ -416,3 +416,9 @@ footer {
         font-size: 20pt;
     }
 }
+
+@media (max-width: 425px) {
+    #back-to-top {
+        display: none;
+    }
+}
