@@ -53,6 +53,11 @@
     margin-right: 25px;
 }
 
+.project-tags {
+    height: 40px;
+    display: flex;
+}
+
 .project-tag {
     position: relative;
     transform: translate(0, -50%);
@@ -71,7 +76,12 @@
     font-size: 12pt;
 }
 
-.project-button-read-more, .project-button-website {
+.project-summary {
+    display: block;
+    margin: 15px 0;
+}
+
+.project-buttons a:not(:last-of-type) {
     margin-right: 10px;
 }
 
@@ -89,4 +99,44 @@
 
 .project-button-website:hover::after {
     background-color: var(--green);
+}
+
+/* QUERIES */
+@media (max-width: 1023px) {
+    .project-entry {
+        grid-template-columns: auto;
+    }
+
+    .project-name {
+        transform: translate(0, 150%);
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .project-tags {
+        width: 100%;
+        justify-content: center;
+        transform: translate(0, -50%);
+    }
+
+    .project-date {
+        display: block;
+        text-align: center;
+        width: 100%;
+        transform: translate(0, 175%);
+    }
+
+    .project-summary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 40px 0 10px 0;
+    }
+
+    .project-buttons {
+        display: flex;
+        justify-content: center;
+    }
 }

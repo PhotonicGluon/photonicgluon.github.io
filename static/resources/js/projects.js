@@ -71,26 +71,30 @@ function processData(data) {
                     <span class="project-name">${projectInfo['name']}</span>`;
 
         // Add tags
+        outputHTML += "<div class='project-tags'>"
         projectInfo["tags"].forEach((tag) => {
             outputHTML += `<span class="project-tag">${capitalize(tag)}</span>`;
         });
-        outputHTML += "</div>";
+        outputHTML += "</div></div>";
 
         // Date configuration
         outputHTML += `<span class="project-date">${projectInfo['start_date']}`;
         if (projectInfo["end_date"] != null) {
             outputHTML += ` &mdash; ${projectInfo["end_date"]}`
         }
-        outputHTML += "</span><br><br>";
+        outputHTML += "</span>";
 
-        outputHTML += `<span>${projectInfo['summary']}</span><br><br>
-                <a href="/project?id=${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
+        outputHTML += `<span class="project-summary">${projectInfo['summary']}</span>`;
+
+        // End button configuration
+        outputHTML += `<div class="project-buttons">
+                        <a href="/project?id=${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
         if (projectInfo["website_url"] != null) {
             outputHTML += `<a href="${projectInfo['website_url']}" target="_blank" class="button project-button-website">
                 Project Website
                 </a>`;
         }
-        outputHTML += `</div></div>`;
+        outputHTML += `</div></div></div>`;
 
         projectsList.append(`<li>${outputHTML}</li>`);
     }

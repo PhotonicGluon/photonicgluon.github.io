@@ -55,7 +55,7 @@ header h1 {
 .hero-box-text {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
     font-size: 21pt;
 }
 
