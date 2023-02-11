@@ -34,7 +34,9 @@ $.ajax(queryURL, {
                 }
             });
         } else {
-            // Todo handle HTML type
+            $.ajax(baseURL + projectID + ".html", {
+                success: (code) => $("#project-desc").html(code)
+            });
         }
     },
     error: (msg) => {

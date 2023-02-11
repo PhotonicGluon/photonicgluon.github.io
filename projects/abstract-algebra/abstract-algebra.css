@@ -1,0 +1,33 @@
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+}
+
+.book {
+    display: block;
+    text-align: center;
+}
+
+.book-cover {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.book-cover img {
+    border-radius: 20px;
+    height: 400px;
+    max-width: 100%;
+}
+
+.book-download {
+    border: 1px solid var(--blue);
+}
+
+.book-download:hover::after {
+    background-color: var(--blue);
+}
