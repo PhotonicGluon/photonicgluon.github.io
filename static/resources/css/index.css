@@ -21,30 +21,6 @@ h1, h2 {
     margin: 0 auto;
 }
 
-@media (max-width: 1340px) {
-    .row {
-        max-width: 1100px;
-    }
-}
-
-@media (max-width: 1240px) {
-    .row {
-        padding: 0 var(--gutter-medium);
-    }
-}
-
-@media (max-width: 600px) {
-    .row {
-        padding: 0 var(--gutter-normal);
-    }
-}
-
-@media (max-width: 600px) {
-    .row {
-        padding: 0 var(--gutter-small);
-    }
-}
-
 /* HERO BOX */
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
@@ -159,4 +135,26 @@ header h1 {
     font-weight: bold;
     text-align: center;
     text-decoration: underline;
+}
+
+/* QUERIES */
+@media (max-width: 1200px) {
+    .hero-box-text {
+        padding: 0 5%;
+    }
+
+    .featured-projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 equal-width columns */
+    }
+}
+
+@media (max-width: 1023px) {
+    .featured-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-entry-image {
+        height: 100%;
+        margin: 5px;
+    }
 }
