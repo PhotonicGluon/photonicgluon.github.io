@@ -102,7 +102,7 @@
 }
 
 /* QUERIES */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     #projects-list li:not(:last-of-type) {
         margin-bottom: 50px;
     }

@@ -345,7 +345,7 @@ footer {
 }
 
 /* QUERIES */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .main-nav {
         position: fixed;
         margin-top: 0;
