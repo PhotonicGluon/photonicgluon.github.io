@@ -1,33 +1,5 @@
 /* IMPORT FONTS */
 @font-face {
-    font-family: "CMU Serif";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/cmun-normal.ttf");
-}
-
-@font-face {
-    font-family: "CMU Serif";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../fonts/cmun-bold.ttf");
-}
-
-@font-face {
-    font-family: "CMU Serif";
-    font-style: italic;
-    font-weight: 400;
-    src: url("../fonts/cmun-italic.ttf");
-}
-
-@font-face {
-    font-family: "CMU Serif";
-    font-style: italic;
-    font-weight: 700;
-    src: url("../fonts/cmun-bolditalic.ttf");
-}
-
-@font-face {
     font-family: "Odin Rounded";
     font-style: normal;
     font-weight: 300;
