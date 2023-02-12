@@ -152,6 +152,11 @@ a:visited:hover {
     color: rgb(113, 60, 221);
 }
 
+/* Image styling */
+.image-wrapper {
+    overflow-x: scroll;
+}
+
 /* CONTAINER STYLING */
 .grid-container {
     display: grid;

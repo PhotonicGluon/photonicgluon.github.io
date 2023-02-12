@@ -1,3 +1,16 @@
+// Define showdown converter and image wrapping extension
+let imageWrapperExt = {
+    type: "output",
+    filter: (src) => {
+        return src.replace(
+            /<p><img .+?><\/p>/g,
+            (x) => `<div class="image-wrapper">${x.substring(3, x.length - 4)}</div>`
+        );
+    }
+};
+showdown.extension("image_wrapper", imageWrapperExt);
+let converter = new showdown.Converter({extensions: ["image_wrapper"]});
+
 // Retrieve project data
 let projectID = new URLSearchParams(window.location.search).get("id");
 let baseURL = PROJECTS_FOLDER + projectID + "/";
@@ -23,7 +36,6 @@ $.ajax(PROJECTS_FILE, {
 
         // Add tags
         let projectTags = $("#project-tags");
-        console.log(project["tags"]);
         for (let i in project["tags"]) {
             projectTags.append(`<span class="project-tag" id="tag-${i}">${capitalize(project["tags"][i])}</span>`);
             addColourToTag(document.getElementById(`tag-${i}`));
@@ -46,7 +58,6 @@ $.ajax(PROJECTS_FILE, {
         if (project["page_type"] === "markdown") {
             $.ajax(baseURL + projectID + ".md", {
                 success: (code) => {
-                    let converter = new showdown.Converter();
                     let outputHTML = converter.makeHtml(code);
                     $("#project-desc").html(outputHTML);
                 }
