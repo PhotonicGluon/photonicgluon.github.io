@@ -60,15 +60,20 @@ function processData(data) {
     // Then add projects to the webpage
     for (let i = 0; i < numProjects; i++) {
         let projectInfo = projects[i];
+        let outputHTML = `<div class="project-entry"><div class="project-entry-image">`;
 
-        let outputHTML =
-            `<div class="project-entry">
-            <div class="project-entry-image">
-                <img src="${projectInfo['banner']}" alt="${projectInfo['name']} Banner">
-            </div>
-            <div class="project-entry-description">
-                <div class="project-entry-description-head">
-                    <span class="project-name">${projectInfo['name']}</span>`;
+        // Add banner if possible
+        if (projectInfo["banner"] != null) {
+            outputHTML += `<img src="${projectInfo['banner']}" alt="${projectInfo['name']} Banner">`;
+        } else {
+            outputHTML += `<img src="/static/resources/img/no-image.jpg" alt="No Image">`;
+        }
+        outputHTML += "</div>";
+
+        // Add project name
+        outputHTML += `<div class="project-entry-description">
+                            <div class="project-entry-description-head">
+                            <span class="project-name">${projectInfo['name']}</span>`;
 
         // Add tags
         outputHTML += "<div class='project-tags'>"
