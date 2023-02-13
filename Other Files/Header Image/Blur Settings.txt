@@ -1,3 +1,0 @@
-BeFunky blur settings:
-- Blur:  3%
-- Gamma: 50%
