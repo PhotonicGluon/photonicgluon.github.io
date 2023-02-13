@@ -1,11 +1,23 @@
+/*
+Possible tag colours:
+- Red:      [229, 94, 81]
+- Orange:   [205, 115, 58]
+- Yellow:   [201, 155, 62]
+- Green:    [100, 183, 93]
+- Blue:     [107, 164, 248]
+- Purple:   [156, 107, 223]
+- Pink:     [204, 104, 160]
+- Grey:     [141, 148, 157]
+ */
+
 // Constants
 const PROJECTS_FOLDER = "/projects/";
 const PROJECTS_FILE = PROJECTS_FOLDER + "projects.json";
 
 const TAGS = {
-    "programming": [13, 114, 165],
-    "mathematics": [82, 122, 82],
-    "music": [184, 184, 20]
+    "programming": [100, 183, 93],
+    "mathematics": [107, 164, 248],
+    "music": [156, 107, 223]
 };
 
 // Helper functions
