@@ -55,13 +55,23 @@
 }
 
 /* QUERIES */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     header {
         height: 300px;
     }
 
     .hero-box {
         top: 150px;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        height: 100vh;
+    }
+
+    .hero-box {
+        top: 50vh;
     }
 
     #hero-box-project-duration span {
@@ -70,15 +80,5 @@
 
     #project-banner-image {
         height: 100%;
-    }
-}
-
-@media (max-width: 375px) {
-    header {
-        height: 400px;
-    }
-
-    .hero-box {
-        top: 200px;
     }
 }
