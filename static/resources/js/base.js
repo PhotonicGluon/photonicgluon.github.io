@@ -64,8 +64,10 @@ let mobileNavButtonClose = $("#mobile-nav-button-close");
 
 mobileNavButtonOpen.click(() => {
     mainNav.css("width", "100%");
+    $("html").css("overflow", "hidden");  // Disable scrolling when nav menu is open
 });
 
 mobileNavButtonClose.click(() => {
     mainNav.css("width", "0");
+    $("html").css("overflow", "auto");
 });
