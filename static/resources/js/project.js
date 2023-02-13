@@ -32,7 +32,13 @@ $.ajax(PROJECTS_FILE, {
         heroBoxProjectName.text(project["name"]);
         $("#hero-box-project-start-date").text(project["start_date"]);
         $("#hero-box-project-end-date").text(project["end_date"]);
-        $("#project-banner-image").html(`<img src="${project['banner']}" alt="${project['name']} Banner">`);
+
+        // Add banner if provided
+        if (project["banner"] != null) {
+            $("#project-banner-image").html(`<img src="${project['banner']}" alt="${project['name']} Banner">`);
+        } else {
+            $("#project-banner-image").remove();
+        }
 
         // Add tags
         let projectTags = $("#project-tags");
