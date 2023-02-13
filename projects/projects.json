@@ -73,6 +73,19 @@
     "github_url": "https://github.com/PhotonicGluon/Quaestiones",
     "page_type": "markdown"
   },
+  "the-challenge": {
+    "name": "The Challenge",
+    "tags": [
+      "programming",
+      "mathematics"
+    ],
+    "start_date": "2020-09-13",
+    "end_date": "2020-11-08",
+    "banner": "https://user-images.githubusercontent.com/25820201/93889162-7493a980-fd1b-11ea-98d9-c6604751ab25.png",
+    "summary": "A web project about solving mathematics problems.",
+    "github_url": "https://github.com/PhotonicGluon/The-Challenge",
+    "page_type": "markdown"
+  },
   "video-to-captions": {
     "name": "Video to Captions",
     "tags": [

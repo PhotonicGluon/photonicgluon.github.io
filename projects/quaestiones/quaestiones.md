@@ -25,6 +25,6 @@ As well as change how the input for **every question** is generated via an integ
 
 # History
 
-This is the first web-based project that I tried out. I was heavily inspired by the [*Advent of Code
+This is the second web-based project that I tried out. I was heavily inspired by the [*Advent of Code
 2020*](https://adventofcode.com/2020) by [Eric Wastl](http://was.tl/), and wanted to make a similar (if not heavily
 adapted) version of his project. *Quaestiones* (which means "questions" in latin) was the result of that decision.
