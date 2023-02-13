@@ -9,7 +9,7 @@
   on the spectrogram.
 - Get a sense of how the notes are arranged in the song.
 
-# History / Why make AudiTranscribe?
+# History / Why make *AudiTranscribe*?
 
 I started work on *AudiTranscribe* way back in November 2021. I used Flask and my web-design skills to make a
 rudimentary version of *AudiTranscribe*. The old version of *AudiTranscribe* which was written in Python can still be
