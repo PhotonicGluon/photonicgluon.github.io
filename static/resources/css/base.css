@@ -328,6 +328,12 @@ footer {
         width: 85%;
     }
 
+    .button::after {
+        right: 0;
+        background: transparent;
+        transition: all 0.2s;
+    }
+
     .main-nav {
         position: fixed;
         margin-top: 0;
