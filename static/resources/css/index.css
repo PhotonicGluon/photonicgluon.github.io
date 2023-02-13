@@ -23,18 +23,12 @@ h1, h2 {
 
 /* HERO BOX */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../img/header-background.png");
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("../img/header-background.jpg");
     height: max(600px, 100vh);
-    background-attachment: fixed;
-    color: var(--white-secondary);
 }
 
 header h1, header h2 {
-    margin-top: 0;
     text-align: left;
-    margin-bottom: 1px;
 }
 
 header h1 {
