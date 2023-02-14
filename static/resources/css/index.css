@@ -84,6 +84,7 @@ header h1 {
 
 /* FEATURED PROJECTS */
 .featured-projects {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 equal-width columns */
     grid-column-gap: 5px;
     grid-row-gap: 50px;
