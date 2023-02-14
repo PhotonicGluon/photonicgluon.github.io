@@ -1,7 +1,35 @@
-.projects-container {
-
+/* PROJECTS FILTER */
+.filter-section {
+    width: 90%;
+    margin: 15px auto 10px auto;
 }
 
+.filter-section span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.filter-options-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 20px;
+}
+
+.filter-option {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-option label {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: 10px;
+}
+
+/* PROJECTS LIST */
 #projects-list {
     list-style: none;
     padding-inline-start: 0;

@@ -1,24 +1,43 @@
-// Get all projects in the projects folder
+// Get required elements
 let projectsList = $("#projects-list");
 
-function processData(data) {
-    // Obtain projects that match the filtering condition
-    let projects = [];
+let filterTags = $("#filter-tags");
+let filterDate = $("#filter-date");
+let filterOrder = $("#filter-order");
 
-    let filterCondition = new URLSearchParams(window.location.search).get("filter");
-    for (let key in data) {
-        if (filterCondition != null) {
-            if (data[key]["tags"].includes(filterCondition)) {
-                data[key]["id"] = key;
-                projects.push(data[key]);
+let projects = [];
+
+// Add tag options to filtering
+filterTags.append("<option value='all' selected>All</option>");
+for (let tag in TAGS) filterTags.append(`<option value=${tag}>${capitalize(tag)}</option>`);
+
+// Update project list on filter condition changes
+function updateProjectList() {
+    // Get selected options
+    let selectedTag = filterTags.find(":selected").val();
+    let selectedDate = filterDate.find(":selected").val();
+    let selectedOrder = filterOrder.find(":selected").val();
+
+    console.log(selectedTag, selectedDate, selectedOrder);
+
+    // Clear existing projects
+    projectsList.children().remove();
+
+    // Obtain projects that match the filtering condition
+    let relevantProjects = [];
+
+    for (let key in projects) {
+        if (selectedTag !== "all") {
+            if (projects[key]["tags"].includes(selectedTag)) {
+                relevantProjects.push(projects[key]);
             }
         } else {
-            data[key]["id"] = key;
-            projects.push(data[key]);
+            relevantProjects.push(projects[key]);
         }
     }
+    console.log(projects, relevantProjects);
 
-    let numProjects = projects.length;
+    let numProjects = relevantProjects.length;
 
     // If there are no projects, report that to the user
     if (numProjects === 0) {
@@ -31,35 +50,40 @@ function processData(data) {
     }
 
     // Sort projects by end date (in reverse chronological order)
-    projects.sort((a, b) => {
-        let date1 = a["end_date"];
-        let date2 = b["end_date"];
+    relevantProjects.sort((a, b) => {
+        let date1 = a[selectedDate];
+        let date2 = b[selectedDate];
+        let dateDifference = new Date(date1) - new Date(date2);
 
-        // Place "Present" projects (i.e., projects that are ongoing) at the start of the list
-        if (date1 === "Present" && date2 === "Present") {
-            // If both are currently worked on, sort by name (in ascending order)
-            let name1 = a["name"];
-            let name2 = b["name"];
-
-            if (name1 > name2) {
-                return 1;
-            } else if (name1 < name2) {
-                return -1;
-            } else {
-                return 0;
-            }
-        } else if (date1 === "Present") {
-            return -1;
-        } else if (date2 === "Present") {
-            return 1;
+        if (selectedDate === "start_date") {
+            return selectedOrder === "ascending" ? dateDifference : -dateDifference;
         } else {
-            return new Date(date2) - new Date(date1);
+            // Place "Present" projects (i.e., projects that are ongoing) at the start of the list
+            if (date1 === "Present" && date2 === "Present") {
+                // If both are currently worked on, sort by name (in ascending order)
+                let name1 = a["name"];
+                let name2 = b["name"];
+
+                if (name1 > name2) {
+                    return selectedOrder === "ascending" ? -1 : 1;
+                } else if (name1 < name2) {
+                    return selectedOrder === "ascending" ? 1 : -1;
+                } else {
+                    return 0;
+                }
+            } else if (date1 === "Present") {
+                return selectedOrder === "ascending" ? 1 : -1;
+            } else if (date2 === "Present") {
+                return selectedOrder === "ascending" ? -1 : 1;
+            } else {
+                return selectedOrder === "ascending" ? dateDifference : -dateDifference;
+            }
         }
     });
 
     // Then add projects to the webpage
     for (let i = 0; i < numProjects; i++) {
-        let projectInfo = projects[i];
+        let projectInfo = relevantProjects[i];
         let outputHTML = `<div class="project-entry"><div class="project-entry-image">`;
 
         // Add banner if possible
@@ -106,5 +130,25 @@ function processData(data) {
 
     projectsList.find(".project-tag").each((i, obj) => addColourToTag(obj));
 }
+[filterTags, filterDate, filterOrder].forEach((item) => item.change(updateProjectList));
 
-$.ajax(PROJECTS_FILE, {success: processData});
+$(document).ready(() => {
+    // Select correct tag filter based on argument
+    let filterCondition = new URLSearchParams(window.location.search).get("filter");
+    if (filterCondition) {
+        filterTags.val(filterCondition);
+    }
+
+    // Get all projects in the projects folder
+    $.ajax(PROJECTS_FILE, {
+        success: (data) => {
+            projects = data;
+
+            // Add "id" to projects
+            for (let key in projects) {
+                projects[key]["id"] = key;
+            }
+            updateProjectList();
+        }
+    });
+})

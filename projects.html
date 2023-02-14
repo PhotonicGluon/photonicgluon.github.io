@@ -69,6 +69,30 @@
     </div>
 </header>
 
+<!-- Projects filter -->
+<div class="filter-section">
+    <span><b>Filter Projects</b></span>
+    <div class="filter-options-container">
+        <div class="filter-option">
+            <label for="filter-tags">Tag: </label>
+            <select name="tag" id="filter-tags"></select>
+        </div>
+        <div class="filter-option">
+            <label for="filter-date">Date: </label>
+            <select name="date" id="filter-date">
+                <option value="start_date">Start Date</option>
+                <option value="end_date" selected>End Date</option>
+            </select>
+        </div>
+        <div class="filter-option">
+            <label for="filter-order">Order: </label>
+            <select name="order" id="filter-order">
+                <option value="ascending">Chronological</option>
+                <option value="descending" selected>Reversed</option>
+            </select>
+        </div>
+    </div>
+</div>
 <!-- Projects list -->
 <section id="projects">
     <ul id="projects-list"></ul>
