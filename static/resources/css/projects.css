@@ -182,3 +182,36 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .filter-options-container {
+        grid-template-columns: auto;
+        grid-row-gap: 10px;
+    }
+
+    .filter-option {
+        width: 50vw;
+        justify-content: left;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 75px auto;
+    }
+
+    .filter-option select {
+        width: calc(50vw - 75px);
+    }
+}
+
+@media (max-width: 375px) {
+    .filter-options-container {
+        grid-row-gap: 15px;
+    }
+
+    .filter-option, .filter-option select {
+        width: 75vw;
+    }
+
+    .filter-option label {
+        display: none;
+    }
+}
