@@ -18,7 +18,7 @@
 }
 
 .project-entry-image, .project-entry-description {
-    min-height: 200px;
+    height: 200px;
 }
 
 .project-entry-image {
@@ -113,6 +113,10 @@
 
     .project-entry-image {
         margin-bottom: 10px;
+    }
+
+    .project-entry-image, .project-entry-description {
+        min-height: 200px;
     }
 
     .project-entry-description, .project-entry-description-head {
