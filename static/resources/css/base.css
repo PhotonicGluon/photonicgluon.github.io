@@ -62,7 +62,6 @@ html {
     /* Colours */
     --purple: rgb(98, 71, 170);
     --light-purple: rgb(160, 108, 213);
-    --very-light-purple: rgb(226, 207, 234);
 
     --green: rgb(80, 120, 80);
     --blue: rgb(15, 115, 170);
@@ -70,22 +69,10 @@ html {
 
     --white-primary: rgb(240, 240, 240);
     --white-secondary: rgba(220, 220, 220, 0.8);
-
-    /* Formatting */
-    --container-max-width: 1180px;
-    --container-normal-width: 800px;
-    --container-medium-width: 700px;
-    --container-small-width: 500px;
-
-    --gutter-huge: 120px;
-    --gutter-medium: 60px;
-    --gutter-normal: 30px;
-    --gutter-small-1: 25px;
-    --gutter-small: 20px;
 }
 
 section {
-    padding-bottom: var(--gutter-medium);
+    padding-bottom: 60px;
     border-bottom: 1px solid var(--dark-grey);
     width: 90%;
     margin: auto;
