@@ -1,7 +1,7 @@
 /* PROJECTS FILTER */
 .filter-section {
     width: 90%;
-    margin: 15px auto 5px auto;
+    margin: 15px auto 15px auto;
     padding-bottom: 15px;
 }
 
@@ -132,6 +132,10 @@
 
 /* QUERIES */
 @media (max-width: 1024px) {
+    #projects {
+        padding-bottom: 10px;
+    }
+
     #projects-list li:not(:last-of-type) {
         margin-bottom: 50px;
     }

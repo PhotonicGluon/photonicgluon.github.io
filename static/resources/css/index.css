@@ -1,10 +1,4 @@
 /* MAIN STYLING */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
 /* Basic Styling */
 html {
     text-rendering: optimizeLegibility;

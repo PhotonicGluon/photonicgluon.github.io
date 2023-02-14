@@ -54,6 +54,14 @@
     height: 40px;
 }
 
+/* MISCELLANEOUS */
+#project-not-found {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
 /* QUERIES */
 @media (max-width: 768px) {
     header {
@@ -62,6 +70,10 @@
 
     .hero-box {
         top: 150px;
+    }
+
+    #project-banner-image {
+        height: 100%;
     }
 }
 
@@ -78,7 +90,7 @@
         display: block;
     }
 
-    #project-banner-image {
-        height: 100%;
+    #project {
+        display: none;
     }
 }
