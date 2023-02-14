@@ -1,7 +1,8 @@
 /* PROJECTS FILTER */
 .filter-section {
     width: 90%;
-    margin: 15px auto 10px auto;
+    margin: 15px auto 5px auto;
+    padding-bottom: 15px;
 }
 
 .filter-section span {
