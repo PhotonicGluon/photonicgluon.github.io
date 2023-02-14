@@ -101,6 +101,14 @@
     background-color: var(--green);
 }
 
+.project-button-bandcamp {
+    border: 1px solid rgb(163, 143, 41);
+}
+
+.project-button-bandcamp:hover::after {
+    background-color: rgb(163, 143, 41);
+}
+
 /* QUERIES */
 @media (max-width: 1024px) {
     #projects-list li:not(:last-of-type) {
