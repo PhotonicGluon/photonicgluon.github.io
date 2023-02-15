@@ -1,5 +1,9 @@
 /* MAIN STYLING */
-.music-list li {
+.music-list {
+    padding-bottom: 15px;
+}
+
+.music-list li:not(:last-of-type) {
     margin-bottom: 10px;
 }
 
