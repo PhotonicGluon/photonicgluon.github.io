@@ -131,11 +131,15 @@
 }
 
 .project-button-bandcamp {
-    border: 1px solid rgb(163, 143, 41);
+    border: 1px solid rgb(209, 186, 71);
+}
+
+.project-button-bandcamp:hover, .project-button-bandcamp:visited:hover {
+    color: black;
 }
 
 .project-button-bandcamp:hover::after {
-    background-color: rgb(163, 143, 41);
+    background-color: rgb(209, 186, 71);
 }
 
 /* QUERIES */
