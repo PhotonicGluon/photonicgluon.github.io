@@ -72,7 +72,8 @@ html {
 }
 
 section {
-    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px solid var(--dark-grey);
     width: 90%;
     margin: auto;
