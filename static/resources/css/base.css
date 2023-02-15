@@ -102,11 +102,11 @@ a:hover {
 }
 
 a:visited {
-    color: rgb(145, 103, 228);
+    color: rgb(161, 125, 232);
 }
 
 a:visited:hover {
-    color: rgb(113, 60, 221);
+    color: rgb(129, 82, 224);
 }
 
 /* Miscellaneous styling */
@@ -251,7 +251,11 @@ footer {
 }
 
 .copyright {
-    font-size: 12pt;
+    font-size: 14pt;
+}
+
+.available-on-github {
+    font-size: 10pt;
 }
 
 /* MISCELLANEOUS */
