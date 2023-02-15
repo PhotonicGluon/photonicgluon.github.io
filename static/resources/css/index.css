@@ -117,6 +117,11 @@ header h1 {
 .featured-entry-image img {
     border-radius: 20px;
     max-width: 90%;
+    max-height: 300px;
+}
+
+.project-tags {
+    padding-top: 5px;
 }
 
 .project-tag {
