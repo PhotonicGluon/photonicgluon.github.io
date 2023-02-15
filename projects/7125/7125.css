@@ -1,0 +1,27 @@
+/* MAIN STYLING */
+.music-list li {
+    margin-bottom: 10px;
+}
+
+.music-entry {
+    display: inline-block;
+    width: 260px;
+}
+
+.sheet-music-button {
+    border: 1px solid var(--blue);
+}
+
+.sheet-music-button:hover::after {
+    background-color: var(--blue);
+}
+
+.musescore-button {
+    border: 1px solid var(--green);
+}
+
+.musescore-button:hover::after {
+    background-color: var(--green);
+}
+
+/* QUERIES */
