@@ -1,7 +1,36 @@
-.projects-container {
-
+/* PROJECTS FILTER */
+.filter-section {
+    width: 90%;
+    margin: 15px auto 15px auto;
+    padding-bottom: 20px;
 }
 
+.filter-section span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.filter-options-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 20px;
+}
+
+.filter-option {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-option label {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: 10px;
+}
+
+/* PROJECTS LIST */
 #projects-list {
     list-style: none;
     padding-inline-start: 0;
@@ -18,7 +47,7 @@
 }
 
 .project-entry-image, .project-entry-description {
-    min-height: 200px;
+    height: 200px;
 }
 
 .project-entry-image {
@@ -111,6 +140,10 @@
 
 /* QUERIES */
 @media (max-width: 1024px) {
+    #projects {
+        padding-bottom: 10px;
+    }
+
     #projects-list li:not(:last-of-type) {
         margin-bottom: 50px;
     }
@@ -121,6 +154,10 @@
 
     .project-entry-image {
         margin-bottom: 10px;
+    }
+
+    .project-entry-image, .project-entry-description {
+        min-height: 200px;
     }
 
     .project-entry-description, .project-entry-description-head {
@@ -155,5 +192,38 @@
     .project-buttons {
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-options-container {
+        grid-template-columns: auto;
+        grid-row-gap: 10px;
+    }
+
+    .filter-option {
+        width: 50vw;
+        justify-content: left;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 75px auto;
+    }
+
+    .filter-option select {
+        width: calc(50vw - 75px);
+    }
+}
+
+@media (max-width: 375px) {
+    .filter-options-container {
+        grid-row-gap: 15px;
+    }
+
+    .filter-option, .filter-option select {
+        width: 75vw;
+    }
+
+    .filter-option label {
+        display: none;
     }
 }

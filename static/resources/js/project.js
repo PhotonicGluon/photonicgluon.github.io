@@ -24,6 +24,12 @@ $.ajax(PROJECTS_FILE, {
         if (project == null) {
             title.text("Project Not Found");
             heroBoxProjectName.text("Project Not Found");
+            $("#hero-box-project-duration").remove();
+
+            let projectSection = $("#project");
+            projectSection.children().remove();
+            projectSection.css("padding-bottom", "30px");
+            projectSection.append(`<span id="project-not-found">The requested project could not be found.</span>`);
             return;
         }
 

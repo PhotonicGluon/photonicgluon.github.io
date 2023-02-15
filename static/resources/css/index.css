@@ -1,10 +1,4 @@
 /* MAIN STYLING */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
 /* Basic Styling */
 html {
     text-rendering: optimizeLegibility;
@@ -17,7 +11,7 @@ h1, h2 {
 }
 
 .row {
-    max-width: var(--container-max-width);
+    max-width: 1180px;
     margin: 0 auto;
 }
 
@@ -43,7 +37,7 @@ header h1, header h2 {
 }
 
 header h1 {
-    font-size: 56pt;
+    font-size: 72pt;
 }
 
 .hero-box {
@@ -52,7 +46,7 @@ header h1 {
     top: max(300px, 50%);
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: var(--container-max-width);
+    max-width: 1180px;
     margin: 0 auto;
     color: white;
 }
@@ -84,6 +78,7 @@ header h1 {
 
 /* FEATURED PROJECTS */
 .featured-projects {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 equal-width columns */
     grid-column-gap: 5px;
     grid-row-gap: 50px;
