@@ -1,50 +1,65 @@
 // Get required elements
-let projectsList = $("#projects-list");
+let projectsSection = $("#projects");
 
-let filterTags = $("#filter-tags");
-let filterDate = $("#filter-date");
-let filterOrder = $("#filter-order");
+let filterTags = $("#filter-options-container");
+
+let sortDate = $("#sort-date");
+let sortOrder = $("#sort-order");
 
 let projects = [];
 
 // Add tag options to filtering
-filterTags.append("<option value='all' selected>All</option>");
-for (let tag in TAGS) filterTags.append(`<option value=${tag}>${capitalize(tag)}</option>`);
+for (let tag in TAGS) {
+    filterTags.append(`<div class="filter-option">
+            <input type="checkbox" name="${tag}" id="filter-tag-${tag}">
+            <label for="filter-tag-${tag}">${capitalize(tag)}</label>
+        </div>`);
+}
+
+// Get list of all input tags
+let filterTagsInputs = [];
+filterTags.children().each((i, filterOptionContainer) => {
+    let inputElem = $(filterOptionContainer).children("input");
+    filterTagsInputs.push(inputElem);
+});
 
 // Update project list on filter condition changes
 function updateProjectList() {
-    // Get selected options
-    let selectedTag = filterTags.find(":selected").val();
-    let selectedDate = filterDate.find(":selected").val();
-    let selectedOrder = filterOrder.find(":selected").val();
+    // Get selected tags
+    let selectedTags = new Set();
+    filterTags.children().each((i, filterOptionContainer) => {
+        let inputElem = $(filterOptionContainer).children("input");
+        if (inputElem.prop("checked")) {
+            selectedTags.add(inputElem.prop("name"));
+        }
+    });
 
-    console.log(selectedTag, selectedDate, selectedOrder);
+    // Get selected sort options
+    let selectedDate = sortDate.find(":selected").val();
+    let selectedOrder = sortOrder.find(":selected").val();
 
-    // Clear existing projects
-    projectsList.children().remove();
+    // Reset projects section
+    projectsSection.html(`<ul id="projects-list"></ul>`);
+    let projectsList = $("#projects-list");
 
     // Obtain projects that match the filtering condition
     let relevantProjects = [];
 
     for (let key in projects) {
-        if (selectedTag !== "all") {
-            if (projects[key]["tags"].includes(selectedTag)) {
-                relevantProjects.push(projects[key]);
-            }
-        } else {
-            relevantProjects.push(projects[key]);
+        let tags = projects[key]["tags"];
+        for (let i = 0; i < tags.length; i++) {
+            if (selectedTags.has(tags[i])) relevantProjects.push(projects[key]);
         }
     }
-    console.log(projects, relevantProjects);
 
     let numProjects = relevantProjects.length;
 
     // If there are no projects, report that to the user
     if (numProjects === 0) {
-        let projectsSection = $("#projects");
         projectsSection.html(
             `<p style="text-align: center">No projects matching the requested filter were found.</p>`
         );
+        projectsSection.css("padding-top", 0);
         projectsSection.css("padding-bottom", 0);
         return;
     }
@@ -135,25 +150,24 @@ function updateProjectList() {
 
     projectsList.find(".project-tag").each((i, obj) => addColourToTag(obj));
 }
-[filterTags, filterDate, filterOrder].forEach((item) => item.change(updateProjectList));
 
-$(document).ready(() => {
-    // Select correct tag filter based on argument
-    let filterCondition = new URLSearchParams(window.location.search).get("filter");
-    if (filterCondition) {
-        filterTags.val(filterCondition);
-    }
+filterTagsInputs.forEach((item) => $(item).change(updateProjectList));
+[sortDate, sortOrder].forEach((item) => item.change(updateProjectList));
 
-    // Get all projects in the projects folder
-    $.ajax(PROJECTS_FILE, {
-        success: (data) => {
-            projects = data;
+$(document).ready(() => $.ajax(PROJECTS_FILE, {
+    success: (data) => {
+        projects = data;
 
-            // Add "id" to projects
-            for (let key in projects) {
-                projects[key]["id"] = key;
-            }
-            updateProjectList();
+        // Add "id" to projects
+        for (let key in projects) projects[key]["id"] = key;
+
+        // Select correct tag filter based on argument
+        let filterCondition = new URLSearchParams(window.location.search).get("filter");
+        if (filterCondition) {
+            $(`#filter-tag-${filterCondition}`).click();
+        } else {
+            filterTagsInputs.forEach((item) => $(item).click());
         }
-    });
-})
+        updateProjectList();
+    }
+}));

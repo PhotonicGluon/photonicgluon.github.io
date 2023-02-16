@@ -12,18 +12,43 @@
     margin-bottom: 5px;
 }
 
+.filter-options-container, .sort-options-container {
+    display: block;
+    text-align: center;
+}
+
 .filter-options-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-column-gap: 20px;
+    margin: auto auto 10px auto;
 }
 
 .filter-option {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    width: inherit;
+}
+
+.filter-option:not(:last-of-type) {
+    margin-right: 30px;
 }
 
 .filter-option label {
+    display: inline-block;
+    height: 32px;
+}
+
+.sort-options-container {
+    margin: auto;
+}
+
+.sort-option {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.sort-option:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.sort-option label {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -201,33 +226,56 @@
 
 @media (max-width: 768px) {
     .filter-options-container {
-        grid-template-columns: auto;
-        grid-row-gap: 10px;
+        width: 40vw;
     }
 
     .filter-option {
-        width: 50vw;
-        justify-content: left;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 75px auto;
+        display: block;
+        text-align: left;
     }
 
-    .filter-option select {
-        width: calc(50vw - 75px);
+    .filter-option:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    .sort-options-container {
+        display: block;
+    }
+
+    .sort-option {
+        width: 50vw;
+        display: inline-block;
+        justify-content: left;
+        margin: auto auto 20px auto;
+    }
+
+    .sort-option:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    .sort-option label {
+        display: inline-block;
+    }
+
+    .sort-option select {
+        width: 50vw;
     }
 }
 
 @media (max-width: 375px) {
     .filter-options-container {
+        width: 60vw;
+    }
+
+    .sort-options-container {
         grid-row-gap: 15px;
     }
 
-    .filter-option, .filter-option select {
+    .sort-option, .sort-option select {
         width: 75vw;
     }
 
-    .filter-option label {
+    .sort-option label {
         display: none;
     }
 }
