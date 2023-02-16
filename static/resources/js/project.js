@@ -55,6 +55,11 @@ $.ajax(PROJECTS_FILE, {
 
         // Add links
         let projectLinks = $("#project-links");
+        if (project["bandcamp_url"]) projectLinks.append(`<li>
+            <a href="${project['bandcamp_url']}" title="Link to Bandcamp">
+                <img src="static/vendors/img/bandcamp-button-circle-line-white-256.png" alt="Bandcamp Icon">
+            </a>
+        </li>`);
         if (project["github_url"]) projectLinks.append(`<li>
             <a href="${project['github_url']}" title="Link to GitHub">
                 <img src="static/vendors/img/github-mark-white.svg" alt="GitHub Icon">

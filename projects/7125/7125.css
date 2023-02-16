@@ -1,0 +1,77 @@
+/* MAIN STYLING */
+.music-list {
+    padding-bottom: 15px;
+}
+
+.music-list li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.music-entry, .music-buttons {
+    display: inline-block;
+}
+
+.music-entry {
+    width: 260px;
+}
+
+.sheet-music-button {
+    border: 1px solid var(--blue);
+}
+
+.sheet-music-button:hover::after {
+    background-color: var(--blue);
+}
+
+.musescore-button {
+    border: 1px solid var(--green);
+}
+
+.musescore-button:hover::after {
+    background-color: var(--green);
+}
+
+/* QUERIES */
+@media (max-width: 768px) {
+    ol {
+        list-style: none;
+        padding: 0;
+    }
+
+    .music-entry, .music-title, .music-duration, .music-buttons {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .music-title {
+        font-size: 24pt;
+        font-weight: bold;
+    }
+
+    .music-duration {
+        color: var(--white-secondary);
+    }
+
+    .bracket {
+        display: none;
+    }
+
+    .music-list li:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    .sheet-music-button, .musescore-button {
+        width: 125px;
+    }
+}
+
+@media (max-width: 425px) {
+    .sheet-music-button, .musescore-button {
+        width: 200px;
+    }
+
+    .sheet-music-button {
+        margin-bottom: 5px;
+    }
+}
