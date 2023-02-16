@@ -228,6 +228,12 @@ header h1 {
     --tag-background-colour: rgba(160, 108, 213, 0.5); /* Light purple with alpha */
 }
 
+.irrelevant-tag {
+    --tag-border-colour: rgb(80, 80, 80) !important;
+    --tag-background-colour: rgba(80, 80, 80, 0.5) !important;
+    color: rgb(120, 120, 120);
+}
+
 /* FOOTER */
 footer {
     text-align: center;

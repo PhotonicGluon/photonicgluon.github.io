@@ -43,14 +43,15 @@ function updateProjectList() {
     let projectsList = $("#projects-list");
 
     // Obtain projects that match the filtering condition
-    let relevantProjects = [];
+    let relevantProjects = new Set();
 
     for (let key in projects) {
         let tags = projects[key]["tags"];
         for (let i = 0; i < tags.length; i++) {
-            if (selectedTags.has(tags[i])) relevantProjects.push(projects[key]);
+            if (selectedTags.has(tags[i])) relevantProjects.add(projects[key]);
         }
     }
+    relevantProjects = Array.from(relevantProjects);
 
     let numProjects = relevantProjects.length;
 
@@ -117,7 +118,10 @@ function updateProjectList() {
         // Add tags
         outputHTML += "<div class='project-tags'>"
         projectInfo["tags"].forEach((tag) => {
-            outputHTML += `<span class="project-tag">${capitalize(tag)}</span>`;
+            let cssClasses = "project-tag";
+            if (!selectedTags.has(tag)) cssClasses += " irrelevant-tag";
+
+            outputHTML += `<span class="${cssClasses}">${capitalize(tag)}</span>`;
         });
         outputHTML += "</div></div>";
 
