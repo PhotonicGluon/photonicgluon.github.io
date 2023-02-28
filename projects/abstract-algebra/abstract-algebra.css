@@ -58,13 +58,13 @@
     max-width: 100%;
 }
 
-.book-download {
+.book-download .button {
     display: block;
     margin-bottom: 10px;
     border: 1px solid var(--blue);
 }
 
-.book-download:hover::after {
+.book-download .button:hover::after {
     background-color: var(--blue);
 }
 
