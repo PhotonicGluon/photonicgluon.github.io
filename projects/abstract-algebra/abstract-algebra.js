@@ -5,7 +5,7 @@ function romanNumeral(number) {  // https://stackoverflow.com/a/9083076
         "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
         "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    if (number === 0) return "0";
+    if (number === "0") return "0";
 
     let digits = String(+number).split(""), roman = "", i = 3;
     while (i--) roman = (key[+digits.pop() + (i * 10)] || "") + roman;
