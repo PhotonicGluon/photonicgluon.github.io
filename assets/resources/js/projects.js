@@ -170,7 +170,11 @@ $(document).ready(() => $.ajax(PROJECTS_FILE, {
         if (filterCondition) {
             $(`#filter-tag-${filterCondition}`).click();
         } else {
-            filterTagsInputs.forEach((item) => $(item).click());
+            console.log(filterTagsInputs)
+            filterTagsInputs.forEach((item) => {
+                item = $(item);
+                if (!item.is(":checked")) item.click();
+            });
         }
         updateProjectList();
     }
