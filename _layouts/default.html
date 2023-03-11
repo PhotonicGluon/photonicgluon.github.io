@@ -24,12 +24,12 @@
 
     <!-- My CSS files -->
     <link rel="stylesheet" type="text/css" href="/assets/resources/css/base.css">
-    {% contentblock css_files %}
+    {{ page.css_files }}
 
     <!-- Vendors' scripts -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    {% contentblock vendor_scripts %}
+    {{ page.vendor_scripts }}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@
             </nav>
 
             <div class="hero-box">
-                {% contentblock hero_box_content %}
+                {{ page.hero_box_content }}
             </div>
         </div>
     </header>
@@ -108,6 +108,6 @@
 
     <!-- Scripts -->
     <script src="/assets/resources/js/base.js"></script>
-    {% contentblock scripts %}
+    {{ page.scripts }}
 </body>
 </html>

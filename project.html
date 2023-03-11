@@ -2,30 +2,21 @@
 permalink: /project
 layout: default
 title: Overwrite
----
 
-{% contentfor css_files %}
-<link rel="stylesheet" type="text/css" href="/assets/resources/css/project.css">
-{% endcontentfor %}
-
-{% contentfor vendor_scripts %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+css_files: <link rel="stylesheet" type="text/css" href="/assets/resources/css/project.css">
+vendor_scripts: >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
         integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-{% endcontentfor %}
-
-{% contentfor scripts %}
-<script src="/assets/resources/js/project.js"></script>
-{% endcontentfor %}
-
-{% contentfor hero_box_content %}
-<h1 id="hero-box-project-name"></h1>
-<h2 id="hero-box-project-duration">
-    <span id="hero-box-project-start-date"></span>
-    <span>&mdash;</span>
-    <span id="hero-box-project-end-date"></span>
-</h2>
-{% endcontentfor %}
+scripts: <script src="/assets/resources/js/project.js"></script>
+hero_box_content: >
+    <h1 id="hero-box-project-name"></h1>
+    <h2 id="hero-box-project-duration">
+        <span id="hero-box-project-start-date"></span>
+        <span>&mdash;</span>
+        <span id="hero-box-project-end-date"></span>
+    </h2>
+---
 
 <!-- Project display -->
 <section id="project">
