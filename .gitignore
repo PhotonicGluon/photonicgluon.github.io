@@ -12,5 +12,6 @@ vendor/
 .idea
 Other Files/Header Image
 
+*.lock
 .DS_Store
 project-designer.html
