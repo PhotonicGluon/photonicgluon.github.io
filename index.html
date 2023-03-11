@@ -1,82 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Set meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+---
+layout: default
+title: Overwrite | Overly obsessive projects
+---
 
-    <meta name="robots" content="noindex, nofollow"/>
-    <meta name="description" content="Overly obsessive projects by PhotonicGluon"/>
-    <meta name="keywords" content="java,python,javascript,css,mathematics,music"/>
+{% contentfor css_files %}
+<link rel="stylesheet" type="text/css" href="/assets/resources/css/index.css">
+{% endcontentfor %}
 
-    <meta property="og:title" content="Overwrite | Overly obsessive projects"/>
-    <meta property="og:image" content="https://overwrite.site/static/resources/img/Icon.jpg"/>
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1500">
-    <meta property="og:image:height" content="1500">
+{% contentfor scripts %}
+<script src="/assets/resources/js/index.js"></script>
+{% endcontentfor %}
 
-    <title>Overwrite | Overly obsessive projects</title>
-
-    <link rel="shortcut icon" type="image/png" href="static/resources/img/favicon.png"/>
-
-    <!-- Vendors' CSS files -->
-    <link rel="stylesheet" type="text/css" href="static/vendors/css/normalize.css">
-
-    <!-- My CSS files -->
-    <link rel="stylesheet" type="text/css" href="static/resources/css/base.css">
-    <link rel="stylesheet" type="text/css" href="static/resources/css/index.css">
-
-    <!-- Vendors' scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet">
-</head>
-<body>
-<!-- Header -->
-<header id="hero-box">
-    <div class="hero-box-background-overlay">
-        <nav>
-            <a href="/">
-                <img src="static/resources/img/Icon.jpg" alt="Overwrite Logo" class="logo">
-            </a>
-            <div class="main-nav" id="main-nav">
-                <a id="mobile-nav-button-close">
-                    <img src="static/resources/img/window-close.svg" alt="Close Menu">
-                </a>
-                <ul class="main-nav-list">
-                    <li class="dropdown">
-                        <a href="/projects" class="dropdown-button">Projects</a>
-                        <ul class="dropdown-content">
-                            <li><a href="/projects?filter=programming">Programming</a></li>
-                            <li><a href="/projects?filter=mathematics">Mathematics</a></li>
-                            <li><a href="/projects?filter=music">Music</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about-me">About Me</a></li>
-                </ul>
-            </div>
-            <a id="mobile-nav-button-open">
-                <img src="static/resources/img/hamburger-menu.svg" alt="Open Menu">
-            </a>
-        </nav>
-
-        <div class="hero-box">
-            <div class="hero-box-text">
-                <h1 class="heading-primary">Overwrite</h1>
-                <span>Overly obsessive projects by PhotonicGluon.</span>
-                <br><br>
-                <a href="#get-in-touch" class="button get-in-touch-button">Get in touch</a><br>
-                <br><br>
-                <span style="font-size: 16pt"><em>Scroll down to read more about my projects.</em></span>
-            </div>
-        </div>
-    </div>
-</header>
+{% contentfor hero_box_content %}
+<div class="hero-box-text">
+    <h1 class="heading-primary">Overwrite</h1>
+    <span>Overly obsessive projects by PhotonicGluon.</span>
+    <br><br>
+    <a href="#get-in-touch" class="button get-in-touch-button">Get in touch</a><br>
+    <br><br>
+    <span style="font-size: 16pt"><em>Scroll down to read more about my projects.</em></span>
+</div>
+{% endcontentfor %}
 
 <!-- Featured projects -->
 <section id="featured-projects">
@@ -115,7 +59,7 @@
             <a href="/project?id=overwrite">
                 <figure>
                     <div class="featured-entry-image">
-                        <img src="static/resources/img/banner-dark.png" alt="Overwrite Banner">
+                        <img src="/assets/resources/img/banner-dark.png" alt="Overwrite Banner">
                     </div>
                     <div class="project-tags">
                         <span class="project-tag">Programming</span>
@@ -199,42 +143,3 @@
     </p>
     <a href="mailto:contact@overwrite.site" class="button">contact@overwrite.site</a>
 </section>
-
-<!-- Footer -->
-<footer role="contentinfo">
-    <ul class="social-media-list">
-        <li class="social-media-item">
-            <a href="https://github.com/PhotonicGluon" title="Link to GitHub">
-                <img src="static/vendors/img/github-mark-white.svg" alt="GitHub Logo">
-            </a>
-        </li>
-        <li class="social-media-item">
-            <a href="https://overwrite.bandcamp.com/" title="Link to Bandcamp">
-                <img src="static/vendors/img/bandcamp-button-circle-line-white-256.png" alt="Bandcamp Logo">
-            </a>
-        </li>
-        <li class="social-media-item">
-            <a href="https://www.linkedin.com/in/kan-onn-kit" title="Link to LinkedIn">
-                <img src="static/vendors/img/LI-In-Bug.png" alt="LinkedIn Logo">
-            </a>
-        </li>
-    </ul>
-    <span class="copyright">
-        Copyright © 2023 PhotonicGluon
-    </span>
-    <br>
-    <span class="available-on-github">
-        Overwrite's source code is available on <a href="https://github.com/PhotonicGluon/photonicgluon.github.io">GitHub</a>.
-    </span>
-</footer>
-
-<!-- Back-to-top button -->
-<a href="#hero-box" id="back-to-top" title="Back to top" style="visibility: hidden">
-    <img src="static/resources/img/arrow-up.svg" alt="Up Arrow">
-</a>
-
-<!-- Scripts -->
-<script src="static/resources/js/base.js"></script>
-<script src="static/resources/js/index.js"></script>
-</body>
-</html>
