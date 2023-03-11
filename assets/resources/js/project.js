@@ -57,17 +57,17 @@ $.ajax(PROJECTS_FILE, {
         let projectLinks = $("#project-links");
         if (project["bandcamp_url"]) projectLinks.append(`<li>
             <a href="${project['bandcamp_url']}" title="Link to Bandcamp">
-                <img src="static/vendors/img/bandcamp-button-circle-line-white-256.png" alt="Bandcamp Icon">
+                <img src="/assets/vendors/img/bandcamp-button-circle-line-white-256.png" alt="Bandcamp Icon">
             </a>
         </li>`);
         if (project["github_url"]) projectLinks.append(`<li>
             <a href="${project['github_url']}" title="Link to GitHub">
-                <img src="static/vendors/img/github-mark-white.svg" alt="GitHub Icon">
+                <img src="/assets/vendors/img/github-mark-white.svg" alt="GitHub Icon">
             </a>
         </li>`);
         if (project["website_url"]) projectLinks.append(`<li>
             <a href="${project['website_url']}" title="Link to Website">
-                <img src="static/vendors/img/internet.svg" alt="Website Icon">
+                <img src="/assets/vendors/img/internet.svg" alt="Website Icon">
             </a>
         </li>`);
 
