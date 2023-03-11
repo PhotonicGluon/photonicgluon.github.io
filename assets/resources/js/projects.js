@@ -106,7 +106,7 @@ function updateProjectList() {
         if (projectInfo["banner"] != null) {
             outputHTML += `<img src="${projectInfo['banner']}" alt="${projectInfo['name']} Banner">`;
         } else {
-            outputHTML += `<img src="/static/resources/img/no-image.jpg" alt="No Image">`;
+            outputHTML += `<img src="/assets/resources/img/no-image.jpg" alt="No Image">`;
         }
         outputHTML += "</div>";
 
