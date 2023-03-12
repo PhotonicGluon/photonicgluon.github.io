@@ -168,9 +168,9 @@ $(document).ready(() => $.ajax(PROJECTS_FILE, {
         // Select correct tag filter based on argument
         let filterCondition = new URLSearchParams(window.location.search).get("filter");
         if (filterCondition) {
-            $(`#filter-tag-${filterCondition}`).click();
+            let checkbox = $(`#filter-tag-${filterCondition}`);
+            if(!checkbox.is(":checked")) checkbox.click();
         } else {
-            console.log(filterTagsInputs)
             filterTagsInputs.forEach((item) => {
                 item = $(item);
                 if (!item.is(":checked")) item.click();
