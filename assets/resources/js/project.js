@@ -22,7 +22,7 @@ $.ajax(PROJECTS_FILE, {
         let title = $("title");
         let heroBoxProjectName = $("#hero-box-project-name");
         if (project == null) {
-            title.text("Project Not Found");
+            title.text("Project Not Found | Overwrite");
             heroBoxProjectName.text("Project Not Found");
             $("#hero-box-project-duration").remove();
 
@@ -34,7 +34,7 @@ $.ajax(PROJECTS_FILE, {
         }
 
         // Update main details
-        title.text("Overwrite - " + project["name"]);
+        title.text(project["name"] + " | Overwrite");
         heroBoxProjectName.text(project["name"]);
         $("#hero-box-project-start-date").text(project["start_date"]);
         $("#hero-box-project-end-date").text(project["end_date"]);

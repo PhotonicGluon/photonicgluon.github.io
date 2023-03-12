@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Overwrite - Overly obsessive projects by PhotonicGluon
+title: Overwrite
 email: contact@overwrite.site
 description: >-
   Overwrite: Overly obsessive projects by PhotonicGluon.
@@ -27,7 +27,11 @@ domain: "overwrite.site"
 url: "https://overwrite.site" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-github_username:  PhotonicGluon
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+github_username: PhotonicGluon
 
 # Build settings
 theme: minima
@@ -51,3 +55,9 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: "projects/**"
+    values:
+      sitemap: false
