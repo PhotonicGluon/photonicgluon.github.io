@@ -1,0 +1,13 @@
+---
+layout: default
+
+css_files: <link rel="stylesheet" type="text/css" href="/assets/resources/css/post.css">
+scripts: <script src="/assets/resources/js/post.js"></script>
+---
+
+<span id="post-name" hidden>{{ page.title }}</span>
+<span id="post-date" hidden>{{ page.date | date_to_string }}</span>
+
+<section id="post">
+    {{ content }}
+</section>
