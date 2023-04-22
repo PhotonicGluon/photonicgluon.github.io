@@ -148,7 +148,7 @@ nav {
 }
 
 .main-nav-list li:not(:last-of-type) {
-    width: 150px;
+    margin-right: 25px;
 }
 
 .main-nav-list li a {
@@ -161,6 +161,10 @@ nav {
 .dropdown {
     float: left;
     overflow: hidden;
+}
+
+.dropdown-content {
+    width: 0;
 }
 
 .dropdown .dropdown-content {
@@ -189,6 +193,10 @@ nav {
 
 #mobile-nav-button-open, #mobile-nav-button-close {
     display: none;
+}
+
+#mobile-nav-button-open:hover, #mobile-nav-button-close:hover {
+    cursor: pointer;
 }
 
 /* HERO BOX */
@@ -289,17 +297,7 @@ footer {
 }
 
 /* QUERIES */
-@media (max-width: 768px) {
-    section {
-        width: 85%;
-    }
-
-    .button::after {
-        right: 0;
-        background: transparent;
-        transition: all 0.2s;
-    }
-
+@media (max-width: 1024px) {
     .main-nav {
         position: fixed;
         margin-top: 0;
@@ -326,6 +324,10 @@ footer {
         width: 100% !important;
         text-align: right;
         margin-bottom: 25px;
+    }
+
+    .main-nav-list li:not(:last-of-type) {
+        margin-right: 0;
     }
 
     #mobile-nav-button-open {
@@ -363,6 +365,18 @@ footer {
 
     .dropdown-content li a {
         font-size: 20pt;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 85%;
+    }
+
+    .button::after {
+        right: 0;
+        background: transparent;
+        transition: all 0.2s;
     }
 
     #back-to-top {
