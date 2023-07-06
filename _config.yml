@@ -35,6 +35,7 @@ github_username: PhotonicGluon
 
 # Build settings
 theme: minima
+timezone: Asia/Singapore
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -12,6 +12,11 @@
 
     <link rel="shortcut icon" type="image/png" href="/assets/resources/img/favicon.png"/>
 
+    {% if jekyll.environment == "production" %}
+        <!-- Google Analytics tracking ID -->
+        {% include analytics.html %}
+    {% endif %}
+
     <!-- Vendors' CSS files -->
     <link rel="stylesheet" type="text/css" href="/assets/vendors/css/normalize.css">
 
