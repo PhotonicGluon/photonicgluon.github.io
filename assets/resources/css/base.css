@@ -201,7 +201,7 @@ nav {
 
 /* HERO BOX */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../img/header-background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../img/header-background.webp");
     background-size: cover;
     background-position: center;
     height: 200px;
