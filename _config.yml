@@ -56,9 +56,3 @@ timezone: Asia/Singapore
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-defaults:
-  - scope:
-      path: "projects/**"
-    values:
-      sitemap: false
