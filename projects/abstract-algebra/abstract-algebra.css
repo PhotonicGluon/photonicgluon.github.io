@@ -32,6 +32,10 @@
     font-family: "CMU Serif", serif;
 }
 
+.abstract-algebra h2, .abstract-algebra h3 {
+    font-weight: bold;
+}
+
 .book-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

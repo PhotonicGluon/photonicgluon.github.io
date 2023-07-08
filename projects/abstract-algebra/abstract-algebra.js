@@ -19,6 +19,7 @@ $(document).ready(() => {
         let latestRelease = releases[0];
         let assets = latestRelease["assets"];
         let numAssets = assets.length;
+        let body = latestRelease["body"];
 
         for (let i = 0; i < numAssets; i++) {
             let asset = assets[i];
@@ -37,5 +38,7 @@ $(document).ready(() => {
                 `<a href="${downloadURL}" class="button" download>Download Version ${version}</a>`
             );
         }
+
+        $("#changelog").html(converter.makeHtml(body));
     });
 });
