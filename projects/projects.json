@@ -6,7 +6,7 @@
     ],
     "start_date": "2022-10-16",
     "end_date": "2023-02-16",
-    "banner": "https://f4.bcbits.com/img/a1399793884_10.jpg",
+    "banner": "https://f4.bcbits.com/img/a1399793884_10.webp",
     "summary": "An EP exploring themes of secrets, identity, and revelations.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/7125",
     "page_type": "html"
@@ -18,7 +18,7 @@
     ],
     "start_date": "2022-10-04",
     "end_date": "Present",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Images/banner/banner-light.png",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Images/banner/banner-light.webp",
     "summary": "A series of books about abstract algebra.",
     "github_url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
     "page_type": "html"
@@ -31,7 +31,7 @@
     ],
     "start_date": "2021-11-14",
     "end_date": "Present",
-    "banner": "https://raw.githubusercontent.com/AudiTranscribe/AudiTranscribe/main/Designs/banner/banner.png",
+    "banner": "https://raw.githubusercontent.com/AudiTranscribe/AudiTranscribe/main/Designs/banner/banner.webp",
     "summary": "An open-source music transcription application.",
     "github_url": "https://github.com/AudiTranscribe/AudiTranscribe",
     "website_url": "https://auditranscribe.app/",
@@ -44,7 +44,7 @@
     ],
     "start_date": "2021-08-13",
     "end_date": "2021-09-15",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.png",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.webp",
     "summary": "Chess Clock Trivia is a trivia game where teams answer questions within a certain time limit.",
     "github_url": "https://github.com/PhotonicGluon/Chess-Clock-Trivia",
     "page_type": "markdown"
@@ -80,7 +80,7 @@
     ],
     "start_date": "2020-12-27",
     "end_date": "2021-06-06",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Quaestiones/e3a8c6e7c1f0db23227a8bd9e0d37cd0442828e9/Banner.png",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Quaestiones/main/Banner.webp",
     "summary": "An application that assists you in making a simple questions asking site.",
     "github_url": "https://github.com/PhotonicGluon/Quaestiones",
     "page_type": "markdown"
@@ -93,7 +93,7 @@
     ],
     "start_date": "2020-09-13",
     "end_date": "2020-11-08",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/The-Challenge/000aaf7bd4e0f5f5b6127ce4c8771bcc1238b901/Banner.png",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/The-Challenge/master/Banner.webp",
     "summary": "A web project about solving mathematics problems.",
     "github_url": "https://github.com/PhotonicGluon/The-Challenge",
     "page_type": "markdown"
