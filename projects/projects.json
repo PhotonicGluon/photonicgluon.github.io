@@ -60,6 +60,17 @@
     "github_url": "https://github.com/PhotonicGluon/Good-Morning-Image-Finder",
     "page_type": "markdown"
   },
+  "intro-to-competitive-programming": {
+    "name": "Intro To Competitive Programming",
+    "tags": [
+      "programming"
+    ],
+    "start_date": "2022-03-26",
+    "end_date": "2022-04-20",
+    "summary": "Jupyter Notebooks for teaching Competitive Programming simply.",
+    "github_url": "https://github.com/PhotonicGluon/Intro-To-Competitive-Programming",
+    "page_type": "markdown"
+  },
   "overwrite": {
     "name": "Overwrite",
     "tags": [
@@ -71,6 +82,17 @@
     "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon.",
     "github_url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
     "website_url": "https://overwrite.site/",
+    "page_type": "markdown"
+  },
+  "python-core": {
+    "name": "Python Core",
+    "tags": [
+      "programming"
+    ],
+    "start_date": "2020-02-03",
+    "end_date": "2020-03-19",
+    "summary": "A beginner's python course in the form of Jupyter Notebooks.",
+    "github_url": "https://github.com/PhotonicGluon/Python-Core",
     "page_type": "markdown"
   },
   "quaestiones": {
