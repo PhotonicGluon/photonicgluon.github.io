@@ -14,7 +14,8 @@
   "abstract-algebra": {
     "name": "Abstract Algebra",
     "tags": [
-      "mathematics"
+      "mathematics",
+      "writing"
     ],
     "start_date": "2022-10-04",
     "end_date": "Present",
@@ -63,7 +64,8 @@
   "intro-to-competitive-programming": {
     "name": "Intro To Competitive Programming",
     "tags": [
-      "programming"
+      "programming",
+      "writing"
     ],
     "start_date": "2022-03-26",
     "end_date": "2022-04-20",
@@ -87,7 +89,8 @@
   "python-core": {
     "name": "Python Core",
     "tags": [
-      "programming"
+      "programming",
+      "writing"
     ],
     "start_date": "2020-02-03",
     "end_date": "2020-03-19",

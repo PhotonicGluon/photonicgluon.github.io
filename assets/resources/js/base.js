@@ -17,7 +17,8 @@ const PROJECTS_FILE = PROJECTS_FOLDER + "projects.json";
 const TAGS = {
     "programming": [100, 183, 93],
     "mathematics": [107, 164, 248],
-    "music": [156, 107, 223]
+    "music": [156, 107, 223],
+    "writing": [205, 115, 58]
 };
 
 // Helper functions
