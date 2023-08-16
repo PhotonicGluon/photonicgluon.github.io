@@ -12,7 +12,11 @@
 
     <link rel="shortcut icon" type="image/png" href="/assets/resources/img/favicon.webp"/>
 
-    <title>{{ page.title }} | Overwrite</title>
+    {% if page.url == "/" %}
+        <title>{{ page.title }}</title>
+    {% else %}
+        <title>{{ page.title }} | Overwrite</title>
+    {% endif %}
 
     {% if jekyll.environment == "production" %}
         {% include analytics.html %}
