@@ -1,4 +1,5 @@
 // Define showdown converter and image wrapping extension
+// Todo: deprecate Showdown
 let imageWrapperExt = {
     type: "output",
     filter: (src) => {
@@ -12,7 +13,10 @@ showdown.extension("image_wrapper", imageWrapperExt);
 let converter = new showdown.Converter({extensions: ["image_wrapper"]});
 
 // Retrieve project data
-let projectID = new URLSearchParams(window.location.search).get("id");
+let pageURL = window.location.href;
+pageURL = pageURL.substring(0, pageURL.length-1);  // Remove trailing slash
+
+let projectID = pageURL.substring(pageURL.lastIndexOf("/") + 1);
 let baseURL = PROJECTS_FOLDER + projectID + "/";
 
 $.ajax(PROJECTS_FILE, {

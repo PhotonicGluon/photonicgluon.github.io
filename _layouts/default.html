@@ -22,7 +22,15 @@
 </head>
 
 <body>
-{% include hero-box.html %}
+<header id="hero-box">
+    <div class="hero-box-background-overlay">
+        {% include hero-box-nav.html %}
+
+        <div class="hero-box">
+            {{ page.hero_box_content }}
+        </div>
+    </div>
+</header>
 
 {{ content }}
 
