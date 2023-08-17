@@ -37,6 +37,12 @@ github_username: PhotonicGluon
 theme: minima
 timezone: Asia/Singapore
 
+defaults:
+  - scope:
+      path: "**/*.pdf"
+    values:
+      sitemap: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

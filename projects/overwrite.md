@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Overwrite
-permalink: /project/overwrite
 ---
 
 Overly obsessive projects by PhotonicGluon.

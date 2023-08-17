@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Python Core
-permalink: /project/python-core
 ---
 
 A beginner's Python course in the form of Jupyter Notebooks.

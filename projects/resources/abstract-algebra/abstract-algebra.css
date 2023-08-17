@@ -3,28 +3,28 @@
     font-family: "CMU Serif";
     font-style: normal;
     font-weight: 400;
-    src: url("../../assets/resources/fonts/cmun-normal.ttf");
+    src: url("../../../assets/resources/fonts/cmun-normal.ttf");
 }
 
 @font-face {
     font-family: "CMU Serif";
     font-style: normal;
     font-weight: 700;
-    src: url("../../assets/resources/fonts/cmun-bold.ttf");
+    src: url("../../../assets/resources/fonts/cmun-bold.ttf");
 }
 
 @font-face {
     font-family: "CMU Serif";
     font-style: italic;
     font-weight: 400;
-    src: url("../../assets/resources/fonts/cmun-italic.ttf");
+    src: url("../../../assets/resources/fonts/cmun-italic.ttf");
 }
 
 @font-face {
     font-family: "CMU Serif";
     font-style: italic;
     font-weight: 700;
-    src: url("../../assets/resources/fonts/cmun-bolditalic.ttf");
+    src: url("../../../assets/resources/fonts/cmun-bolditalic.ttf");
 }
 
 /* MAIN STYLING */

@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Chess Clock Trivia
-permalink: /project/chess-clock-trivia
 ---
 
 *Chess Clock Trivia* is a trivia game where teams answer questions within a certain time limit.

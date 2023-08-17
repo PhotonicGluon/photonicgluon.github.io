@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Intro To Competitive Programming
-permalink: /project/intro-to-competitive-programming
 ---
 
 Jupyter Notebooks for teaching Competitive Programming simply.

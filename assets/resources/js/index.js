@@ -26,7 +26,7 @@ $(document).ready(() => $.ajax(PROJECTS_FILE, {
             let projectInfo = featuredProjects[i];
 
             let outputHTML = `<div class="featured-entry">`;
-            outputHTML += `<a href="/project?id=${projectInfo['id']}" target="_blank">`
+            outputHTML += `<a href="/projects/${projectInfo['id']}" target="_blank">`
             outputHTML += `<figure>`
 
             // Add banner if possible

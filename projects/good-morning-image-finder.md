@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Good Morning Image Finder
-permalink: /project/good-morning-image-finder
 ---
 
 This is an application that helps find "Good Morning" images automatically.
