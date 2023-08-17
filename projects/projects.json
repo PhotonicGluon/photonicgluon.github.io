@@ -9,7 +9,6 @@
     "banner": "https://f4.bcbits.com/img/a1399793884_10.webp",
     "summary": "An EP exploring themes of secrets, identity, and revelations.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/7125",
-    "page_type": "html",
     "featured": 4
   },
   "abstract-algebra": {
@@ -23,7 +22,6 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Images/banner/banner-light.webp",
     "summary": "A series of books about abstract algebra.",
     "github_url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
-    "page_type": "html",
     "featured": 2
   },
   "auditranscribe": {
@@ -38,7 +36,6 @@
     "summary": "An open-source music transcription application.",
     "github_url": "https://github.com/AudiTranscribe/AudiTranscribe",
     "website_url": "https://auditranscribe.app/",
-    "page_type": "markdown",
     "featured": 1
   },
   "chess-clock-trivia": {
@@ -51,7 +48,6 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.webp",
     "summary": "Chess Clock Trivia is a trivia game where teams answer questions within a certain time limit.",
     "github_url": "https://github.com/PhotonicGluon/Chess-Clock-Trivia",
-    "page_type": "markdown",
     "featured": 6
   },
   "good-morning-image-finder": {
@@ -63,7 +59,6 @@
     "end_date": "2021-01-21",
     "summary": "A simple application that helps find \"Good Morning\" images automatically.",
     "github_url": "https://github.com/PhotonicGluon/Good-Morning-Image-Finder",
-    "page_type": "markdown",
     "featured": 0
   },
   "intro-to-competitive-programming": {
@@ -76,7 +71,6 @@
     "end_date": "2022-04-20",
     "summary": "Jupyter Notebooks for teaching Competitive Programming simply.",
     "github_url": "https://github.com/PhotonicGluon/Intro-To-Competitive-Programming",
-    "page_type": "markdown",
     "featured": 0
   },
   "overwrite": {
@@ -90,7 +84,6 @@
     "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon.",
     "github_url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
     "website_url": "https://overwrite.site/",
-    "page_type": "markdown",
     "featured": 3
   },
   "python-core": {
@@ -103,7 +96,6 @@
     "end_date": "2020-03-19",
     "summary": "A beginner's python course in the form of Jupyter Notebooks.",
     "github_url": "https://github.com/PhotonicGluon/Python-Core",
-    "page_type": "markdown",
     "featured": 0
   },
   "quaestiones": {
@@ -116,7 +108,6 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Quaestiones/main/Banner.webp",
     "summary": "An application that assists you in making a simple questions asking site.",
     "github_url": "https://github.com/PhotonicGluon/Quaestiones",
-    "page_type": "markdown",
     "featured": 5
   },
   "the-challenge": {
@@ -130,7 +121,6 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/The-Challenge/master/Banner.webp",
     "summary": "A web project about solving mathematics problems.",
     "github_url": "https://github.com/PhotonicGluon/The-Challenge",
-    "page_type": "markdown",
     "featured": 7
   },
   "video-to-captions": {
@@ -142,7 +132,6 @@
     "end_date": "2021-10-24",
     "summary": "A program that helps convert a video into a transcript with timestamps.",
     "github_url": "https://github.com/PhotonicGluon/Video-To-Captions",
-    "page_type": "markdown",
     "featured": 0
   }
 }
