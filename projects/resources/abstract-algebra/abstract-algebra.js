@@ -45,16 +45,13 @@ $(document).ready(() => {
         $("#latest-release").html(`(${latestRelease["name"]})`);
         $("#changelog").html(converter.makeHtml(body));
         renderMathInElement(document.getElementById("changelog"), {
-            // customised options
-            // • auto-render specific keys, e.g.:
             delimiters: [
                 {left: "$$", right: "$$", display: true},
                 {left: "$", right: "$", display: false},
                 {left: "\\(", right: "\\)", display: false},
                 {left: "\\[", right: "\\]", display: true}
             ],
-            // • rendering keys, e.g.:
-            throwOnError : false
+            throwOnError: false
         });
     });
 });
