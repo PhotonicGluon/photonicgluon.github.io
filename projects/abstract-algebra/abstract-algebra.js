@@ -1,3 +1,6 @@
+// Initialize Showdown converter
+let converter = new showdown.Converter();
+
 // Helper functions
 function romanNumeral(number) {  // https://stackoverflow.com/a/9083076
     // Constants

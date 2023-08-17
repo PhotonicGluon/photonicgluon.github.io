@@ -1,3 +1,9 @@
+---
+layout: project
+title: Quaestiones
+permalink: /project/quaestiones
+---
+
 *Quaestiones* is an application that assists you in making a simple questions asking site.
 
 # Features

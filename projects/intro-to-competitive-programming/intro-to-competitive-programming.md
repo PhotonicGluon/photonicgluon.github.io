@@ -1,3 +1,9 @@
+---
+layout: project
+title: Intro To Competitive Programming
+permalink: /project/intro-to-competitive-programming
+---
+
 Jupyter Notebooks for teaching Competitive Programming simply.
 
 I largely adapted the content of the course from Steven and Felix Halim's excellent book "Competitive Programming 3". 

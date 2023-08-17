@@ -1,3 +1,9 @@
+---
+layout: project
+title: Overwrite
+permalink: /project/overwrite
+---
+
 Overly obsessive projects by PhotonicGluon.
 
 The idea for *Overwrite* was conceived in 2021, but I did not start to properly develop it until February 2023. It

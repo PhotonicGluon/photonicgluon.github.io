@@ -1,3 +1,9 @@
+---
+layout: project
+title: Video to Captions
+permalink: /project/video-to-captions
+---
+
 A program that helps convert a video into a transcript with timestamps.
 
 # History / Why make *Video to Captions*?

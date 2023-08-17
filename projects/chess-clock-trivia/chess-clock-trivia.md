@@ -1,3 +1,9 @@
+---
+layout: project
+title: Chess Clock Trivia
+permalink: /project/chess-clock-trivia
+---
+
 *Chess Clock Trivia* is a trivia game where teams answer questions within a certain time limit.
 
 *Chess Clock Trivia* was made as a school (and personal) project in 2021. I wanted to try my hand out at making a proper

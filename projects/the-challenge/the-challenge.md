@@ -1,3 +1,9 @@
+---
+layout: project
+title: The Challenge
+permalink: /project/the-challenge
+---
+
 **The Challenge**: a gauntlet of 14 mathematics questions that are to be solved within 15 minutes.
 
 # What is *The Challenge*?

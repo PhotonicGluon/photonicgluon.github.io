@@ -1,3 +1,9 @@
+---
+layout: project
+title: Python Core
+permalink: /project/python-core
+---
+
 A beginner's Python course in the form of Jupyter Notebooks.
 
 I largely adapted the content of the course from [Sololearn's Python Core](https://www.sololearn.com/learning/1073)

@@ -1,3 +1,9 @@
+---
+layout: project
+title: Auditranscribe
+permalink: /project/auditranscribe
+---
+
 *AudiTranscribe* is an open-source music transcription application.
 
 # Features

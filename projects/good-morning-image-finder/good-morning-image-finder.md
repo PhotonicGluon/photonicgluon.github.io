@@ -1,3 +1,9 @@
+---
+layout: project
+title: Good Morning Image Finder
+permalink: /project/good-morning-image-finder
+---
+
 This is an application that helps find "Good Morning" images automatically.
 
 One of my earliest projects that experimented with web scraping using Selenium. This is also one of a few projects that
