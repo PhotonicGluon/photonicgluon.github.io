@@ -156,7 +156,7 @@
 }
 
 .project-button-bandcamp {
-    border: 1px solid rgb(209, 186, 71);
+    border: 1px solid var(--yellow);
 }
 
 .project-button-bandcamp:hover, .project-button-bandcamp:visited:hover {
@@ -164,7 +164,7 @@
 }
 
 .project-button-bandcamp:hover::after {
-    background-color: rgb(209, 186, 71);
+    background-color: var(--yellow);
 }
 
 /* QUERIES */
