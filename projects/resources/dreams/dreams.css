@@ -4,7 +4,7 @@
 }
 
 .music-track:last-of-type {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 
 .music-entry, .music-buttons {
@@ -43,6 +43,7 @@
 }
 
 .bandcamp-button {
+    margin: 10px 0;
     border: 1px solid var(--yellow);
 }
 
@@ -60,16 +61,6 @@
         list-style: none;
         padding: 0;
     }
-
-    /*.music-entry, .music-title, .music-duration, .music-buttons, .music-caption {*/
-    /*    display: block;*/
-    /*    width: 100%;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*.music-title {*/
-    /*    font-size: 24pt;*/
-    /*}*/
 
     .music-image img {
         width: 95%;
