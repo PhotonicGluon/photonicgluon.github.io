@@ -1,5 +1,6 @@
 // Retrieve project data
 let pageURL = window.location.href;
+pageURL = pageURL.replace(/(?:\/|\.html)$/, "")
 let projectID = pageURL.substring(pageURL.lastIndexOf("/") + 1);
 
 $.ajax(PROJECTS_FILE, {
