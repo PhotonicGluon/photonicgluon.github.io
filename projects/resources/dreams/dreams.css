@@ -1,0 +1,83 @@
+/* MAIN STYLING */
+.music-track:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.music-track:last-of-type {
+    margin-bottom: 40px;
+}
+
+.music-entry, .music-buttons {
+    display: block;
+}
+
+.music-entry {
+    width: 200px;
+}
+
+.music-buttons, .music-caption {
+    text-align: center;
+}
+
+.music-title {
+    font-weight: bold;
+    font-size: 1.17em;
+}
+
+.music-image {
+    width: 100%;
+}
+
+.music-image img {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.music-caption {
+    font-style: italic;
+    color: var(--light-grey);
+}
+
+.bandcamp-button {
+    margin: 10px 0;
+    border: 1px solid var(--yellow);
+}
+
+.bandcamp-button:hover, .bandcamp-button:visited:hover {
+    color: black;
+}
+
+.bandcamp-button:hover::after {
+    background-color: var(--yellow);
+}
+
+/* QUERIES */
+@media (max-width: 768px) {
+    ol {
+        list-style: none;
+        padding: 0;
+    }
+
+    .music-image img {
+        width: 95%;
+    }
+
+    .music-list li:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    .bandcamp-button {
+        width: 125px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .bandcamp-button {
+        width: 200px;
+    }
+}
