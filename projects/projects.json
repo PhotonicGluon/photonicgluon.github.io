@@ -19,10 +19,10 @@
     ],
     "start_date": "2022-10-04",
     "end_date": "Present",
-    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/Images/banner/banner-light.webp",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/images/banner/banner.webp",
     "summary": "A series of books about abstract algebra.",
     "github_url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
-    "featured": 3
+    "featured": 2
   },
   "auditranscribe": {
     "name": "AudiTranscribe",
@@ -36,7 +36,7 @@
     "summary": "An open-source music transcription application.",
     "github_url": "https://github.com/AudiTranscribe/AudiTranscribe",
     "website_url": "https://auditranscribe.app/",
-    "featured": 2
+    "featured": 3
   },
   "chess-clock-trivia": {
     "name": "Chess Clock Trivia",

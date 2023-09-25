@@ -21,26 +21,18 @@ $(document).ready(() => {
     $.get("https://api.github.com/repos/PhotonicGluon/Abstract-Algebra-Book/releases", (releases) => {
         let latestRelease = releases[0];
         let assets = latestRelease["assets"];
-        let numAssets = assets.length;
         let body = latestRelease["body"];
 
-        for (let i = 0; i < numAssets; i++) {
-            let asset = assets[i];
+        let asset = assets[0];
+        let name = asset["name"];
+        let downloadURL = asset["browser_download_url"];
 
-            let name = asset["name"];
-            let downloadURL = asset["browser_download_url"];
+        let nameMatch = name.match(/Abstract_Algebra-v(?<version>[\d.]+)\.pdf/);
+        let version = nameMatch.groups["version"];
 
-            let nameMatch = name.match(/Volume(?<volNum>\d)_v(?<volVer>[\d.]+)\.pdf/);
-            let volumeNumber = nameMatch.groups["volNum"];
-            let volumeNumberRoman = romanNumeral(volumeNumber);
-            let volumeVersion = nameMatch.groups["volVer"];
-
-            let version = volumeNumberRoman + "." + volumeVersion;
-
-            $(`#volume-${volumeNumber}`).html(
-                `<a href="${downloadURL}" class="button" download>Download Version ${version}</a>`
-            );
-        }
+        $(`#book-download`).html(
+            `<a href="${downloadURL}" class="button" download>Download Version ${version}</a>`
+        );
 
         $("#latest-release").html(`(${latestRelease["name"]})`);
         $("#changelog").html(converter.makeHtml(body));
