@@ -36,15 +36,13 @@
     font-weight: bold;
 }
 
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
+.book-container {
+    display: block;
+    text-align: center;
 }
 
 .book {
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 
@@ -53,12 +51,13 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    max-height: 400px;
     margin-bottom: 10px;
 }
 
 .book-cover img {
     border-radius: 20px;
-    height: min(100%, 400px);
+    max-height: 400px;
     max-width: 100%;
 }
 
