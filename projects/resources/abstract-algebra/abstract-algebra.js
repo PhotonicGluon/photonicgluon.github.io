@@ -2,18 +2,22 @@
 let converter = new showdown.Converter();
 
 // Helper functions
-function romanNumeral(number) {  // https://stackoverflow.com/a/9083076
-    // Constants
-    const key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
-        "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
-        "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+function ordinalSuffix(num) {  // Adapted from https://stackoverflow.com/a/13627586
+    let tens = num % 10;
+    let hundreds = num % 100;
 
-    if (number === "0") return "0";
+    let suffix = "th";
+    if (tens === 1 && hundreds !== 11) {
+        suffix = "st";
+    }
+    if (tens === 2 && hundreds !== 12) {
+        suffix = "nd";
+    }
+    if (tens === 3 && hundreds !== 13) {
+        suffix = "rd";
+    }
 
-    let digits = String(+number).split(""), roman = "", i = 3;
-    while (i--) roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-
-    return Array(+digits.join("") + 1).join("M") + roman;
+    return `${num}<sup>${suffix}</sup>`
 }
 
 // Main code
@@ -27,14 +31,22 @@ $(document).ready(() => {
         let name = asset["name"];
         let downloadURL = asset["browser_download_url"];
 
-        let nameMatch = name.match(/Abstract_Algebra-v(?<version>[\d.]+)\.pdf/);
-        let version = nameMatch.groups["version"];
+        let nameMatch = name.match(
+            /Abstract_Algebra_v(?<edition>[\d.]+)(?:-build\.(?<build>\d+))?\.pdf/
+        );
+        let edition = nameMatch.groups["edition"];
+        let build = nameMatch.groups["build"];
+
+        let downloadText = `Download ${ordinalSuffix(edition)} Edition`;
+        if (build !== null) {
+            downloadText += ` (Build ${build})`;
+        }
 
         $(`#book-download`).html(
-            `<a href="${downloadURL}" class="button" download>Download Version ${version}</a>`
+            `<a href="${downloadURL}" class="button" download>${downloadText}</a>`
         );
 
-        $("#latest-release").html(`(${latestRelease["name"]})`);
+        $("#latest-release").html(latestRelease["name"]);
         $("#changelog").html(converter.makeHtml(body));
         renderMathInElement(document.getElementById("changelog"), {
             delimiters: [
