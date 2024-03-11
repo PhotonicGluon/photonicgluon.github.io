@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include meta-tags.html %}
+    {% seo title=false %}
+
+    {% if page.url == "/" %}
+    <title>{{ page.title }}</title>
+    {% else %}
+    <title>{{ page.title }} | Overwrite</title>
+    {% endif %}
+
+    {% if jekyll.environment == "production" %}
+    {% include analytics.html %}
+    {% endif %}
+
+    {% include header-css.html css_file="/assets/resources/css/project.css" %}
+
+    {% include vendor-scripts.html %}
+
+    {% include fonts.html %}
+</head>
+
+<body>
+<header id="hero-box">
+    <div class="hero-box-background-overlay">
+        {% include hero-box-nav.html %}
+
+        <div class="hero-box">
+            <h1 id="hero-box-project-name"></h1>
+            <h2 id="hero-box-project-duration">
+                <span id="hero-box-project-start-date"></span>
+                <span>&mdash;</span>
+                <span id="hero-box-project-end-date"></span>
+            </h2>
+        </div>
+    </div>
+</header>
+
+<!-- Project display -->
+<section id="project">
+    <div id="project-banner-image"><img alt="{{ page.title }} Banner" src="/assets/resources/img/no-image.webp"></div>
+    <div id="project-tags"></div>
+    <ul id="project-links"></ul>
+    <div id="project-desc">{{ content }}</div>
+</section>
+
+{% include footer.html %}
+
+{% include scripts.html script="/assets/resources/js/project.js" %}
+</body>
+</html>

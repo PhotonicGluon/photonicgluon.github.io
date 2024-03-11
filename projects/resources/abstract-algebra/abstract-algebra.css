@@ -1,0 +1,85 @@
+/* FONTS SETUP */
+@font-face {
+    font-family: "CMU Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../../assets/resources/fonts/cmun-normal.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../../assets/resources/fonts/cmun-bold.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../../../assets/resources/fonts/cmun-italic.ttf");
+}
+
+@font-face {
+    font-family: "CMU Serif";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../../../assets/resources/fonts/cmun-bolditalic.ttf");
+}
+
+/* MAIN STYLING */
+.abstract-algebra {
+    font-family: "CMU Serif", serif;
+}
+
+.abstract-algebra h2, .abstract-algebra h3 {
+    font-weight: bold;
+}
+
+.book-container {
+    display: block;
+    text-align: center;
+}
+
+.book {
+    display: inline-block;
+    text-align: center;
+}
+
+.book-cover {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.book-cover img {
+    border-radius: 20px;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+.book-download .button {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid var(--blue);
+}
+
+.book-download .button:hover::after {
+    background-color: var(--blue);
+}
+
+/* QUERIES */
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 425px) {
+    .book-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

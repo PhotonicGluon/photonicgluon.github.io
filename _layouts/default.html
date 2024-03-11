@@ -1,69 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Set meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% include meta-tags.html %}
+    {% seo title=false %}
 
-    <meta property="og:image" content="https://overwrite.site/static/resources/img/Icon.jpg"/>
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1500">
-    <meta property="og:image:height" content="1500">
-
-    <link rel="shortcut icon" type="image/png" href="/assets/resources/img/favicon.webp"/>
-
-    {% if jekyll.environment == "production" %}
-        {% include analytics.html %}
+    {% if page.url == "/" %}
+    <title>{{ page.title }}</title>
+    {% else %}
+    <title>{{ page.title }} | Overwrite</title>
     {% endif %}
 
-    <!-- Vendors' CSS files -->
-    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/normalize.css">
+    {% if jekyll.environment == "production" %}
+    {% include analytics.html %}
+    {% endif %}
 
-    <!-- My CSS files -->
-    <link rel="stylesheet" type="text/css" href="/assets/resources/css/base.css">
-    {{ page.css_files }}
+    {% include header-css.html %}
 
-    <!-- Vendors' scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    {{ page.vendor_scripts }}
+    {% include vendor-scripts.html %}
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet">
-
-    {% seo %}
+    {% include fonts.html %}
 </head>
+
 <body>
 <header id="hero-box">
     <div class="hero-box-background-overlay">
-        <nav>
-            <a href="/">
-                <img src="/assets/resources/img/Icon.webp" alt="Overwrite Logo" class="logo">
-            </a>
-            <div class="main-nav" id="main-nav">
-                <a id="mobile-nav-button-close">
-                    <img src="/assets/resources/img/window-close.svg" alt="Close Menu">
-                </a>
-                <ul class="main-nav-list">
-                    <li class="dropdown">
-                        <a href="/projects" class="dropdown-button">My Projects</a>
-                        <ul class="dropdown-content">
-                            <li><a href="/projects?filter=programming">Programming</a></li>
-                            <li><a href="/projects?filter=mathematics">Mathematics</a></li>
-                            <li><a href="/projects?filter=music">Music</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/about">About Me</a></li>
-                </ul>
-            </div>
-            <a id="mobile-nav-button-open">
-                <img src="/assets/resources/img/hamburger-menu.svg" alt="Open Menu">
-            </a>
-        </nav>
+        {% include hero-box-nav.html %}
 
         <div class="hero-box" id="hero-box-content">
             {{ page.hero_box_content }}
@@ -73,41 +34,8 @@
 
 {{ content }}
 
-<!-- Footer -->
-<footer role="contentinfo">
-    <ul class="social-media-list">
-        <li class="social-media-item">
-            <a href="https://github.com/PhotonicGluon" title="Link to GitHub">
-                <img src="/assets/vendors/img/github-mark-white.svg" alt="GitHub Logo">
-            </a>
-        </li>
-        <li class="social-media-item">
-            <a href="https://melodicgluon.bandcamp.com/" title="Link to Bandcamp">
-                <img src="/assets/vendors/img/bandcamp-button-circle-line-white-256.png" alt="Bandcamp Logo">
-            </a>
-        </li>
-        <li class="social-media-item">
-            <a href="https://www.linkedin.com/in/kan-onn-kit" title="Link to LinkedIn">
-                <img src="/assets/vendors/img/LI-In-Bug.png" alt="LinkedIn Logo">
-            </a>
-        </li>
-    </ul>
-    <span class="copyright">
-        Copyright © {{ site.time | date: "%Y" }} PhotonicGluon
-    </span>
-    <br>
-    <span class="available-on-github">
-        Overwrite's source code is available on <a href="https://github.com/PhotonicGluon/photonicgluon.github.io">GitHub</a>.
-    </span>
-</footer>
+{% include footer.html %}
+{% include scripts.html %}
 
-<!-- Back-to-top button -->
-<a href="#hero-box" id="back-to-top" title="Back to top" style="visibility: hidden">
-    <img src="/assets/resources/img/arrow-up.svg" alt="Up Arrow">
-</a>
-
-<!-- Scripts -->
-<script src="/assets/resources/js/base.js"></script>
-{{ page.scripts }}
 </body>
 </html>

@@ -1,0 +1,7 @@
+<!-- Scripts -->
+<script src="/assets/resources/js/base.js"></script>
+{% if include.script %}
+<script src="{{ include.script }}"></script>
+{% else %}
+{{ page.scripts }}
+{% endif %}

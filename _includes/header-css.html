@@ -1,0 +1,10 @@
+<!-- Vendors' CSS files -->
+<link rel="stylesheet" type="text/css" href="/assets/vendors/css/normalize.css">
+
+<!-- My CSS files -->
+<link rel="stylesheet" type="text/css" href="/assets/resources/css/base.css">
+{% if include.css_file %}
+    <link rel="stylesheet" type="text/css" href="{{ include.css_file }}">
+{% else %}
+    <link rel="stylesheet" type="text/css" href="{{ page.css_file }}">
+{% endif %}

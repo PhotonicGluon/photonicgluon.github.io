@@ -136,7 +136,7 @@ function updateProjectList() {
 
         // End button configuration
         outputHTML += `<div class="project-buttons">
-                        <a href="/project?id=${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
+                        <a href="/projects/${projectInfo['id']}" class="button project-button-read-more">Read More</a>`;
         if (projectInfo["bandcamp_url"]) {
             outputHTML += `<a href="${projectInfo['bandcamp_url']}" target="_blank" class="button project-button-bandcamp">
                 Bandcamp
