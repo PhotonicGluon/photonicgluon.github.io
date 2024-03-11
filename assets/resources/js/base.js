@@ -52,6 +52,10 @@ function addColourToTag(tagObj) {
     $(tagObj).css("--tag-background-colour", makeColourFromArray(addAlphaToColour(colourArray, 0.5)));
 }
 
+function jekyllDateToString(jekyllDate) {
+    return jekyllDate.split(" ")[0];
+}
+
 // Configure "back to top" button
 let backToTopButton = $("#back-to-top");
 

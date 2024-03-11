@@ -5,9 +5,15 @@ css_files: <link rel="stylesheet" type="text/css" href="/assets/resources/css/po
 scripts: <script src="/assets/resources/js/post.js"></script>
 ---
 
+<span id="post-id" hidden>{{ page.post_id }}</span>
 <span id="post-name" hidden>{{ page.title }}</span>
-<span id="post-date" hidden>{{ page.date | date_to_string }}</span>
+<span id="post-date" hidden>{{ page.date }}</span>
+<span id="post-cover-img" hidden>/assets/resources/posts/{{ page.post_id }}/{{ page.cover_img }}</span>
 
 <section id="post">
+<!--    <div id="post-banner-image">-->
+<!--        <img src="/assets/resources/posts/{{ page.post_id }}/{{ page.cover_img }}" alt="Cover Image">-->
+<!--    </div>-->
+
     {{ content }}
 </section>
