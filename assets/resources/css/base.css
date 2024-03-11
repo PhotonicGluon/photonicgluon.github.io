@@ -150,7 +150,7 @@ nav {
 }
 
 .main-nav-list li:not(:last-of-type) {
-    margin-right: 25px;
+    width: 150px;
 }
 
 .main-nav-list li a {
