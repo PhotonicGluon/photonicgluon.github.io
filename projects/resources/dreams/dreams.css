@@ -55,6 +55,22 @@
     background-color: var(--yellow);
 }
 
+.sheet-music-button {
+    border: 1px solid var(--blue);
+}
+
+.sheet-music-button:hover::after {
+    background-color: var(--blue);
+}
+
+.musescore-button {
+    border: 1px solid var(--green);
+}
+
+.musescore-button:hover::after {
+    background-color: var(--green);
+}
+
 /* QUERIES */
 @media (max-width: 768px) {
     ol {
