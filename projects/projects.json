@@ -9,7 +9,7 @@
     "banner": "https://f4.bcbits.com/img/a1399793884_10.jpg",
     "summary": "An EP exploring themes of secrets, identity, and revelations.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/7125",
-    "featured": 5
+    "featured": 6
   },
   "abstract-algebra": {
     "name": "Abstract Algebra",
@@ -22,7 +22,7 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/images/banner/banner.webp",
     "summary": "A series of books about abstract algebra.",
     "github_url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
-    "featured": 2
+    "featured": 3
   },
   "auditranscribe": {
     "name": "AudiTranscribe",
@@ -36,7 +36,7 @@
     "summary": "An open-source music transcription application.",
     "github_url": "https://github.com/AudiTranscribe/AudiTranscribe",
     "website_url": "https://auditranscribe.app/",
-    "featured": 3
+    "featured": 4
   },
   "chess-clock-trivia": {
     "name": "Chess Clock Trivia",
@@ -48,7 +48,7 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Chess-Clock-Trivia/main/others/Banner.webp",
     "summary": "Chess Clock Trivia is a trivia game where teams answer questions within a certain time limit.",
     "github_url": "https://github.com/PhotonicGluon/Chess-Clock-Trivia",
-    "featured": 7
+    "featured": 8
   },
   "dreams": {
     "name": "Dreams",
@@ -60,7 +60,7 @@
     "banner": "/projects/resources/dreams/cover.png",
     "summary": "An album exploring the thoughts that appear in the subconscious and the hidden truths revealed within.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/dreams",
-    "featured": 1
+    "featured": 2
   },
   "good-morning-image-finder": {
     "name": "Good Morning Image Finder",
@@ -96,7 +96,7 @@
     "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon.",
     "github_url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
     "website_url": "https://overwrite.site/",
-    "featured": 4
+    "featured": 5
   },
   "python-core": {
     "name": "Python Core",
@@ -120,7 +120,19 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Quaestiones/main/Banner.webp",
     "summary": "An application that assists you in making a simple questions asking site.",
     "github_url": "https://github.com/PhotonicGluon/Quaestiones",
-    "featured": 6
+    "featured": 7
+  },
+  "spectra": {
+    "name": "Spectra",
+    "tags": [
+      "music"
+    ],
+    "start_date": "2024-01-19",
+    "end_date": "Present",
+    "banner": "TBC",
+    "summary": "TBC",
+    "bandcamp_url": "https://melodicgluon.bandcamp.com/album/spectra",
+    "featured": 1
   },
   "the-challenge": {
     "name": "The Challenge",
@@ -133,7 +145,7 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/The-Challenge/master/Banner.webp",
     "summary": "A web project about solving mathematics problems.",
     "github_url": "https://github.com/PhotonicGluon/The-Challenge",
-    "featured": 8
+    "featured": 9
   },
   "video-to-captions": {
     "name": "Video to Captions",
