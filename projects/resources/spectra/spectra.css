@@ -42,6 +42,10 @@
     color: var(--light-grey);
 }
 
+.bandcamp-player {
+    text-align: center;
+}
+
 .bandcamp-button {
     margin: 10px 0;
     border: 1px solid var(--yellow);
