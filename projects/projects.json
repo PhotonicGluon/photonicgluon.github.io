@@ -92,6 +92,7 @@
     ],
     "start_date": "2024-04-24",
     "end_date": "2024-04-30",
+    "banner": "https://raw.githubusercontent.com/PhotonicGluon/MACBETh/main/img/banner.png",
     "summary": "Analyses malware based on its attributes, and helps classify malware based on reports generated in VirusTotal.",
     "github_url": "https://github.com/PhotonicGluon/MACBETh",
     "featured": 0
