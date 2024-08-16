@@ -39,6 +39,10 @@ timezone: Asia/Singapore
 
 defaults:
   - scope:
-      path: "**/*.pdf"
+      path: "projects/resources/7125/*.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "projects/resources/dreams/Awakening.pdf"
     values:
       sitemap: false
