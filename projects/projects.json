@@ -22,7 +22,7 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Abstract-Algebra-Book/main/images/banner/banner.webp",
     "summary": "A series of books about abstract algebra.",
     "github_url": "https://github.com/PhotonicGluon/Abstract-Algebra-Book",
-    "featured": 2
+    "featured": 1
   },
   "auditranscribe": {
     "name": "AudiTranscribe",
@@ -36,7 +36,18 @@
     "summary": "An open-source music transcription application.",
     "github_url": "https://github.com/AudiTranscribe/AudiTranscribe",
     "website_url": "https://auditranscribe.app/",
-    "featured": 5
+    "featured": 7
+  },
+  "candid": {
+    "name": "Candid",
+    "tags": [
+      "writing"
+    ],
+    "start_date": "2024-08-14",
+    "end_date": "2024-08-31",
+    "banner": "TODO: ADD",
+    "summary": "A message in a bottle.",
+    "featured": 3
   },
   "chess-clock-trivia": {
     "name": "Chess Clock Trivia",
@@ -60,7 +71,7 @@
     "banner": "/projects/resources/dreams/cover.png",
     "summary": "An album exploring the thoughts that appear in the subconscious and the hidden truths revealed within.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/dreams",
-    "featured": 4
+    "featured": 5
   },
   "good-morning-image-finder": {
     "name": "Good Morning Image Finder",
@@ -108,7 +119,7 @@
     "summary": "PhotonicGluon's portfolio site. Overly obsessive projects by PhotonicGluon.",
     "github_url": "https://github.com/PhotonicGluon/photonicgluon.github.io",
     "website_url": "https://overwrite.site/",
-    "featured": 3
+    "featured": 2
   },
   "python-core": {
     "name": "Python Core",
@@ -132,7 +143,7 @@
     "banner": "https://raw.githubusercontent.com/PhotonicGluon/Quaestiones/main/Banner.webp",
     "summary": "An application that assists you in making a simple questions asking site.",
     "github_url": "https://github.com/PhotonicGluon/Quaestiones",
-    "featured": 7
+    "featured": 0
   },
   "spectra": {
     "name": "Spectra",
@@ -144,7 +155,7 @@
     "banner": "/projects/resources/spectra/cover.webp",
     "summary": "An album exploring the spectrum of joy that we feel.",
     "bandcamp_url": "https://melodicgluon.bandcamp.com/album/spectra",
-    "featured": 1
+    "featured": 4
   },
   "the-challenge": {
     "name": "The Challenge",
