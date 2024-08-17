@@ -1,4 +1,5 @@
 // Constants
+const BASE16_CHARACTERS = "0123456789abcdef";
 const BASE64_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";  // RFC 4648, section 5
 
 // Functions
@@ -25,10 +26,13 @@ function hex_to_bin(hexString) {
         return [];
     }
 
-    let bitString = parseInt(hexString, 16).toString(2).padStart(hexString.length * 4, "0");
     let bits = [];
-    for (let i = 0; i < bitString.length; i++) {
-        bits.push(parseInt(bitString[i]));
+    for (let i = 0; i < hexString.length; i++) {
+        let numericVal = BASE16_CHARACTERS.indexOf(hexString[i]);
+        let bitString = numericVal.toString(2).padStart(4, "0");  // Hex uses 4 bits per character
+        for (let j = 0; j < 4; j++) {
+            bits.push(parseInt(bitString[j]));
+        }
     }
     return bits;
 }
@@ -51,7 +55,13 @@ function bin_to_hex(bits) {
     for (let i = 0; i < bits.length; i++) {
         bitString += bits[i];
     }
-    let hexString = parseInt(bitString, 2).toString(16).padStart(bits.length / 4, "0");
+
+    let finalLen = bits.length / 4;  // Base64 uses 4 bits per character
+    let hexString = "";
+    for (let i = 0; i < finalLen; i++) {
+        let numericVal = parseInt(bitString.substring(i * 4, i * 4 + 4), 2);
+        hexString += BASE16_CHARACTERS.charAt(numericVal);
+    }
     return hexString;
 }
 
