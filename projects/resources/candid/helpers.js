@@ -120,7 +120,7 @@ function bin_to_base64(bits) {
  * @param {int[]} bits2 second array of bits
  * @returns array of XORed bits
  */
-function bin_xor(bits1, bits2) {
+function xor_bin(bits1, bits2) {
     if (bits1.length !== bits2.length) {
         throw Error(`Both bit arrays must be of the same length (${bits1.length} vs ${bits2.length})`);
     }
@@ -137,4 +137,69 @@ function bin_xor(bits1, bits2) {
         }
     }
     return final;
+}
+
+/**
+ * Performs XOR on two hexadecimal strings.
+ * @param {string} hex1 first array of hexadecimal digits
+ * @param {string} hex2 second array of hexadecimal digits
+ * @returns string of hexadecimal digits, representing the XOR result
+ */
+function xor_hex(hex1, hex2) {
+    return bin_to_hex(xor_bin(hex_to_bin(hex1), hex_to_bin(hex2)));
+}
+
+/**
+ * Converts a string of hexadecimal digits into a drive ID
+ * @param {string} hexString
+ * @returns Drive ID
+ */
+function hex_to_drive_id(hexString) {
+    // Convert to URL-Safe Base64
+    let b64String = bin_to_base64(hex_to_bin(hexString));
+
+    // Drive IDs always starts with a 1
+    return "1" + b64String;
+}
+
+/**
+ * Converts a drive ID into hexadecimal digits
+ * @param {string} driveID
+ * @returns hexadecimal digits
+ */
+function drive_id_to_hex(driveID) {
+    // Strip leading 1
+    let b64String = driveID.substring(1);
+
+    // Convert to hex
+    return bin_to_hex(base64_to_bin(b64String));
+}
+
+/**
+ * Converts a password into a representative hexadecimal value
+ * @param {string} password
+ * @returns hexadecimal value of the password
+ */
+function password_to_hex(password) {
+    return truncated_hash(password);
+}
+
+/**
+ * Computes the offset needed.
+ * @param {string} password 
+ * @param {string} driveID 
+ * @returns hexadecimal offset value
+ */
+function compute_offset(password, driveID) {
+    return xor_hex(password_to_hex(password), drive_id_to_hex(driveID));
+}
+
+/**
+ * Computes the drive ID for the corresponding password and offset
+ * @param {string} password 
+ * @param {string} offset offset needed to adjust to the correct drive ID
+ * @returns Drive ID
+ */
+function compute_drive_id(password, offset) {
+    return hex_to_drive_id(xor_hex(password_to_hex(password), offset));
 }
