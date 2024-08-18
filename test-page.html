@@ -3,9 +3,24 @@
 
 <head>
     <title>Test Page</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Layer Inputs -->
+    <label for="layerNum">Layer Number:</label>
+    <select name="layerNum" id="layerNum">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+    <label for="layerPassword">Layer Password:</label>
+    <input type="text" id="layerPassword" name="layerPassword">
+    <a id="layerSubmit" href="#">Submit</a>
+    <span id="layerResult"></span>
+
     <script src="projects/resources/candid/js-sha256.js"></script>
     <script src="projects/resources/candid/helpers.js"></script>
     <script src="projects/resources/candid/main.js"></script>
