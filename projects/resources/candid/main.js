@@ -1,15 +1,15 @@
 // Constants
 LAYERS = [
     null,
-    { offset: "bfcb54977d90918f62e108d4a2b79d7cd54927d84de6739c", check: "e60134bf" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
-    // { offset: "abcd", check: "efgh" },
+    { offset: "cd9f9f068c47c03292b669b85d1f7c0ea91734041c1a98cd", check: "ed68404b" },
+    { offset: "e73f6121dbd67a0cf4a8b781699becbcf7d82185de5544c2", check: "6f415937" },
+    { offset: "c303d8ce599a97c0cf94ce166fa04cbaef99e33c3d91d1a1", check: "4f3a3d1e" },
+    { offset: "4c185894ebb556bb31d7671ad7a2f8e340bc15f87922ab32", check: "f2c94689" },
+    { offset: "a4b033d2bf06f1a142c888faa74cea3bd873e5e7e00f0923", check: "ecbf33c7" },
+    { offset: "0c31b75204c63e0dcb408b8ffb34777bb4dcefd48d8b843b", check: "4dce8ede" },
+    { offset: "104c8030fa71666fc5318487de00a8fc8a6f1c171355040a", check: "0459485c" },
+    { offset: "227fdc9b8ea021ffb8944a2665302f49772ad041d83d9fe1", check: "f5689c2c" },
+    { offset: "e1de7a3d6d5637da6aadb7fe04878d92cc7c889138f33b45", check: "2aaf723d" },
 ]
 
 // Elements
@@ -38,8 +38,6 @@ function check_and_return_drive_id(password, layerNum) {
     // Compute the drive ID
     let driveID = compute_drive_id(password, offset);
     let computedCheck = sha256(driveID).substring(56);
-    console.log(computedCheck);
-
     if (computedCheck == correctCheck) {
         return driveID;
     } else {
