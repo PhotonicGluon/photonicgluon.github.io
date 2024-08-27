@@ -1,0 +1,32 @@
+/* MAIN STYLING */
+/* Layer inputs */
+.layer-inputs {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: min-content;
+    padding: 10px 5%;
+    margin: auto;
+}
+
+.layer-inputs label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.layer-inputs select {
+    width: 100%;
+}
+
+/* Button */
+.submit-button {
+    border: 1px solid var(--green);
+    width: 85%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.submit-button:hover::after {
+    background-color: var(--green);
+}

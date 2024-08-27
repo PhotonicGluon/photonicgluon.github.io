@@ -5,6 +5,57 @@ title: Candid
 
 <link rel="stylesheet" type="text/css" href="/projects/resources/candid/candid.css">
 
-TODO
+<!-- Introduction -->
+<p>
+    A close confidant and I had an unusual arrangement. We would send each other locked (i.e., encrypted) files
+    containing our deepest secrets, knowing that we trusted each other enough not to let anything spill out. Recently we
+    agreed to take this one step further, by putting these files online.
+</p>
 
-<script src="/projects/resources/candid/candid.js"></script>
+<p>
+    This is what I've done.
+</p>
+
+<p>
+    Releasing this on my 20th birthday definitely has some meaning to it. These are things that I'm afraid to say out
+    loud in the past decade, during my teens. Now I leave the teenage years behind as I become a young adult. It reminds
+    me of "I Have No Mouth, and I Must Scream" -- there is an unspoken urge to just say out these things, but I know
+    that I can't. I mustn't.
+</p>
+
+<p>
+    I hope that, someday, these secrets wouldn't be too hard to share. But for now they must remain locked. In multiple
+    layers of truth.
+</p>
+
+<!-- Layer Inputs -->
+<div class="layer-inputs">
+    <div style="padding-bottom: 5px;">
+        <label for="layerNum">Layer Number</label>
+        <select name="layerNum" id="layerNum">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+        </select>
+    </div>
+    <div style="padding-bottom: 10px;">
+        <label for="layerPassword">Layer Password</label>
+        <input type="text" id="layerPassword" name="layerPassword">
+    </div>
+    <a class="button submit-button" id="layerSubmit">Submit</a>
+    <span id="layerResult"></span>
+</div>
+
+<!-- Password Explanation -->
+<!-- TODO: ADD -->
+
+<!-- Scripts -->
+<script src="/projects/resources/candid/js-sha256.js"></script>
+<script src="/projects/resources/candid/helpers.js"></script>
+<script src="/projects/resources/candid/main.js"></script>

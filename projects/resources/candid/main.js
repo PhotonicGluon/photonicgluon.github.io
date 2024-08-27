@@ -23,7 +23,7 @@ function get_inputs() {
     let layerNum = parseInt(layerNumElem.get(0).options[layerNumElem.get(0).options.selectedIndex].text);
     let layerPassword = layerPasswordElem.get(0).value;
 
-    return { number: layerNum, password: layerPassword };
+    return { number: layerNum, password: layerPassword.toUpperCase() };
 }
 
 function check_and_return_drive_id(password, layerNum) {

@@ -191,8 +191,6 @@ function password_to_hex(password) {
  * @returns hexadecimal offset value
  */
 function compute_offset(password, driveID) {
-    let computedCheck = sha256(driveID).substring(56);
-    console.log(computedCheck);
     return xor_hex(password_to_hex(password), drive_id_to_hex(driveID));
 }
 
