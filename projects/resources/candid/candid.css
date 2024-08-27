@@ -30,3 +30,19 @@
 .submit-button:hover::after {
     background-color: var(--green);
 }
+
+/* Results */
+.result {
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.result-wrong {
+    color: #c00000;
+}
+
+.result-correct {
+    color: #008000;
+}

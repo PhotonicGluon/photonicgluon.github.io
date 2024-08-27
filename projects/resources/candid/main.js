@@ -51,8 +51,10 @@ function download_file(driveID) {
 }
 
 function display_result(text) {
+    layerResultElem.addClass(`result-${text.toLowerCase()}`);
     layerResultElem.text(text);
     setTimeout(() => {
+        layerResultElem.removeClass(`result-${text.toLowerCase()}`);
         layerResultElem.text("");
     }, 2000);
 }
