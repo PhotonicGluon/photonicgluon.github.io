@@ -6,27 +6,33 @@ title: Candid
 <link rel="stylesheet" type="text/css" href="/projects/resources/candid/candid.css">
 
 <!-- Introduction -->
-<p>
-    A close confidant and I had an unusual arrangement. We would send each other locked (i.e., encrypted) files
-    containing our deepest secrets, knowing that we trusted each other enough not to let anything spill out. Recently we
-    agreed to take this one step further, by putting these files online.
-</p>
+<div>
+    <p>
+        A close confidant and I had an unusual arrangement. We would send each other locked (i.e., encrypted) files
+        containing our deepest secrets, knowing that we trusted each other enough not to let anything spill out.
+        Recently we
+        agreed to take this one step further, by putting these files online.
+    </p>
 
-<p>
-    This is what I've done.
-</p>
+    <p>
+        This is what I've done.
+    </p>
 
-<p>
-    Releasing this on my 20th birthday definitely has some meaning to it. These are things that I'm afraid to say out
-    loud in the past decade, during my teens. Now I leave the teenage years behind as I become a young adult. It reminds
-    me of "I Have No Mouth, and I Must Scream" -- there is an unspoken urge to just say out these things, but I know
-    that I can't. I mustn't.
-</p>
+    <p>
+        Releasing this on my 20th birthday definitely has some meaning to it. These are things that I'm afraid to say
+        out
+        loud in the past decade, during my teens. Now I leave the teenage years behind as I become a young adult. It
+        reminds
+        me of "I Have No Mouth, and I Must Scream" -- there is an unspoken urge to just say out these things, but I know
+        that I can't. I mustn't.
+    </p>
 
-<p>
-    I hope that, someday, these secrets wouldn't be too hard to share. But for now they must remain locked. In multiple
-    layers of truth.
-</p>
+    <p>
+        I hope that, someday, these secrets wouldn't be too hard to share. But for now they must remain locked. In
+        multiple
+        layers of truth.
+    </p>
+</div>
 
 <!-- Layer Inputs -->
 <div class="layer-inputs">
@@ -53,7 +59,27 @@ title: Candid
 </div>
 
 <!-- Password Explanation -->
-<!-- TODO: ADD -->
+<div style="padding-top:25px">
+    <p>
+        Passwords for the layers follow the following format.
+    </p>
+    <ul>
+        <li>Each layer has a hint for what the password is.</li>
+        <li>The hint may be a cipher.</li>
+        <li>The only valid characters are the uppercase letters A to Z, and the dash (<code>-</code>).</li>
+        <li>Each password consists of one or more words, separated by a dash.
+            <ul>
+                <li>For example, <code>CAT</code>, <code>HELLO-WORLD</code>, <code>CAT-AND-DOGS</code>.</li>
+            </ul>
+        </li>
+        <li>There are no leading or trailing spaces for each password.</li>
+    </ul>
+</div>
+
+<div>
+    The hint for <b>Layer 1</b> is as follows.
+    <pre class="code-block">Multilayered vegetable; what the O stands for in TOR. [1 WORD]</pre>
+</div>
 
 <!-- Scripts -->
 <script src="/projects/resources/candid/js-sha256.js"></script>

@@ -46,3 +46,10 @@
 .result-correct {
     color: #008000;
 }
+
+/* Misc */
+.code-block {
+    background-color: #1d2024;
+    padding: 20px;
+    border-radius: 10px;
+}
