@@ -32,14 +32,18 @@ $(document).ready(() => {
         let downloadURL = asset["browser_download_url"];
 
         let nameMatch = name.match(
-            /Abstract_Algebra_v(?<edition>[\d.]+)(?:-build\.(?<build>\d+))?\.pdf/
+            /Abstract_Algebra_v(?<edition>[\d.]+)(?:-build\.(?<build>\d+))?(?:-post\.(?<post>\d+))?\.pdf/
         );
         let edition = nameMatch.groups["edition"];
         let build = nameMatch.groups["build"];
+        let post = nameMatch.groups["post"];
 
         let downloadText = `Download ${ordinal_suffix(edition)} Edition`;
         if (build !== undefined) {
             downloadText += ` (Build ${build})`;
+        }
+        if (post !== undefined) {
+            downloadText += ` (Post ${post})`;
         }
 
         $(`#book-download`).html(
