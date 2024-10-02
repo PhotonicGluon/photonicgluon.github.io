@@ -18,8 +18,7 @@ $(document).ready(() => $.ajax(PROJECTS_FILE, {
         }
 
         // Sort by the "featured" attribute
-        featuredProjects.sort((a,b) => a["featured"] - b["featured"]);
-        console.log(featuredProjects)
+        featuredProjects.sort((a, b) => a["featured"] - b["featured"]);
 
         // Add the featured projects to the index page
         for (let i in featuredProjects) {
