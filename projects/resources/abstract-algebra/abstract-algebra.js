@@ -2,7 +2,7 @@
 let converter = new showdown.Converter();
 
 // Helper functions
-function ordinalSuffix(num) {  // Adapted from https://stackoverflow.com/a/13627586
+function ordinal_suffix(num) {  // Adapted from https://stackoverflow.com/a/13627586
     let tens = num % 10;
     let hundreds = num % 100;
 
@@ -37,8 +37,8 @@ $(document).ready(() => {
         let edition = nameMatch.groups["edition"];
         let build = nameMatch.groups["build"];
 
-        let downloadText = `Download ${ordinalSuffix(edition)} Edition`;
-        if (build !== null) {
+        let downloadText = `Download ${ordinal_suffix(edition)} Edition`;
+        if (build !== undefined) {
             downloadText += ` (Build ${build})`;
         }
 
@@ -50,10 +50,10 @@ $(document).ready(() => {
         $("#changelog").html(converter.makeHtml(body));
         renderMathInElement(document.getElementById("changelog"), {
             delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false},
-                {left: "\\(", right: "\\)", display: false},
-                {left: "\\[", right: "\\]", display: true}
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
             ],
             throwOnError: false
         });
