@@ -2,7 +2,7 @@
 let converter = new showdown.Converter();
 
 // Helper functions
-function ordinalSuffix(num) {  // Adapted from https://stackoverflow.com/a/13627586
+function ordinal_suffix(num) {  // Adapted from https://stackoverflow.com/a/13627586
     let tens = num % 10;
     let hundreds = num % 100;
 
@@ -32,14 +32,18 @@ $(document).ready(() => {
         let downloadURL = asset["browser_download_url"];
 
         let nameMatch = name.match(
-            /Abstract_Algebra_v(?<edition>[\d.]+)(?:-build\.(?<build>\d+))?\.pdf/
+            /Abstract_Algebra_v(?<edition>[\d.]+)(?:-build\.(?<build>\d+))?(?:-post\.(?<post>\d+))?\.pdf/
         );
         let edition = nameMatch.groups["edition"];
         let build = nameMatch.groups["build"];
+        let post = nameMatch.groups["post"];
 
-        let downloadText = `Download ${ordinalSuffix(edition)} Edition`;
-        if (build !== null) {
+        let downloadText = `Download ${ordinal_suffix(edition)} Edition`;
+        if (build !== undefined) {
             downloadText += ` (Build ${build})`;
+        }
+        if (post !== undefined) {
+            downloadText += ` (Post ${post})`;
         }
 
         $(`#book-download`).html(
@@ -50,10 +54,10 @@ $(document).ready(() => {
         $("#changelog").html(converter.makeHtml(body));
         renderMathInElement(document.getElementById("changelog"), {
             delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false},
-                {left: "\\(", right: "\\)", display: false},
-                {left: "\\[", right: "\\]", display: true}
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
             ],
             throwOnError: false
         });
