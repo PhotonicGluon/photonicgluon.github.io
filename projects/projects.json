@@ -108,6 +108,17 @@
     "github_url": "https://github.com/PhotonicGluon/MACBETh",
     "featured": 0
   },
+  "n-gram-lm": {
+    "name": "n-Gram Language Model",
+    "tags": [
+      "programming"
+    ],
+    "start_date": "2024-11-28",
+    "end_date": "2024-11-28",
+    "summary": "An n-Gram language model created from scratch in Python.",
+    "github_url": "https://github.com/PhotonicGluon/n-Gram-Language-Model-From-Scratch",
+    "featured": 0
+  },
   "overwrite": {
     "name": "Overwrite",
     "tags": [
